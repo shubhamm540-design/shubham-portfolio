@@ -338,6 +338,10 @@ input[type=range]{width:100%;accent-color:#9747FF}
 .flinks{display:flex;flex-wrap:wrap;gap:8px}
 .flinks a{padding:9px 18px;border-radius:12px;background:rgba(255,255,255,.7);border:.8px solid rgba(var(--c),.4);text-decoration:none;font-size:15px}
 .flinks a:hover{background:#fff}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.qgrid a{display:flex;align-items:center;gap:10px;padding:0 12px;min-height:50px;font-weight:600;font-size:15px;transition:transform .15s,box-shadow .15s}
+.qgrid a em{font-style:normal;font-size:20px;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(var(--c),.18)}
+.qgrid a:hover{transform:translateY(-2px);box-shadow:0 4px 0 rgba(var(--c),.35)}
 .finfo{display:grid;gap:10px}
 .finfo a,.finfo div{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.7);font-size:15px;text-decoration:none;overflow-wrap:anywhere}
 .fbox p{font-size:15.5px;color:#3B3650;margin-bottom:16px}
@@ -639,7 +643,7 @@ input[type=range]{width:100%;accent-color:#9747FF}
 </div>
 
 <footer class="foot3" aria-label="Footer">
-  <div class="fbox tint tone-purple"><h3>Quick links</h3><div class="flinks"><a href="#home">Home</a><a href="#work">Work</a><a href="#brands">For brands</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div>
+  <div class="fbox tint tone-purple"><h3>Quick Links</h3><div class="flinks qgrid"><a href="#home"><em>🏠</em>Start here</a><a href="#work"><em>🧾</em>The receipts</a><a href="#brands"><em>🤝</em>If I join you</a><a href="#skills"><em>⚡</em>Superpowers</a><a href="#experience"><em>🚀</em>The journey</a><a href="#contact"><em>💬</em>Slide in</a></div></div>
   <div class="fbox tint tone-blue"><h3>Contact</h3><div class="finfo"><div><svg class="ic"><use href="#i-mail"/></svg>Shubhamm540@gmail.com</div><a href="https://www.linkedin.com/in/shubham-mishra-540/"><svg class="ic"><use href="#i-in"/></svg>LinkedIn</a><a href="tel:+919424773526"><svg class="ic"><use href="#i-phone"/></svg>+91-9424773526</a></div></div>
   <div class="fbox tint tone-green"><h3>Let's Connect</h3><p>Want to talk growth, lifecycle or retention? Happy to have a conversation and swap ideas.</p><div class="flinks"><a href="https://www.linkedin.com/in/shubham-mishra-540/">Message on LinkedIn</a><a href="https://wa.me/919424773526" target="_blank" rel="noopener">Connect on WhatsApp</a></div></div>
 </footer>
