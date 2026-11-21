@@ -308,7 +308,7 @@ input[type=range]{width:100%;accent-color:#9747FF}
 .tcard .tcta{display:inline-flex;align-items:center;justify-content:center;gap:8px;align-self:flex-start;min-height:44px;padding:0 18px;border-radius:12px;background:rgba(var(--c),.14);border:.8px solid rgba(var(--c),.55);box-shadow:0 4px 0 rgba(var(--c),.35);font-weight:600;font-size:14.5px;text-decoration:none;color:#1A1530}
 .tcard .tcta:hover{transform:translateY(2px);box-shadow:0 2px 0 rgba(var(--c),.35)}
 .tcard .tcta:focus-visible{outline:3px solid #1A1530;outline-offset:3px}
-.rec-h{font-size:22px;margin:22px 0 10px}
+.rec-sh{margin-top:26px;margin-bottom:10px}
 .rcard{min-height:0}
 .rgrid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 2px 12px;scroll-behavior:smooth}
 .rgrid::-webkit-scrollbar{display:none}
@@ -609,7 +609,6 @@ input[type=range]{width:100%;accent-color:#9747FF}
         <button type="button" data-dir="1" aria-label="Next comments"><svg class="ic"><use href="#i-right"/></svg></button>
       </div>
     </div>
-    <p class="say-meta"><span>7 comments</span><span>5 people</span><span>2 LinkedIn posts</span></p>
     <div class="tgrid" id="say-row" tabindex="0" role="region" aria-label="Comments about me, swipe sideways">
         <article class="tcard tone-blue"><svg class="qm" aria-hidden="true"><use href="#i-quote"/></svg><span class="chip">Growth post</span><blockquote>This is the kind of graphs that make everyone go WoW!</blockquote><div class="who"><span class="av" aria-hidden="true"><img src="img/people/ankit-aggarwal.jpg" alt="" width="46" height="46" loading="lazy"></span><div><b>Ankit Aggarwal</b><span>Founder and CEO, Unstop</span></div></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7334921556264931329?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7334921556264931329%2C7334947652897329155%29" target="_blank" rel="noopener" aria-label="See Ankit Aggarwal’s comment on LinkedIn">View comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
         <article class="tcard tone-pink"><svg class="qm" aria-hidden="true"><use href="#i-quote"/></svg><span class="chip">Journey post</span><blockquote>Keep going. You have been at it, with all your heart.</blockquote><div class="who"><span class="av" aria-hidden="true"><img src="img/people/alekhya-chakrabarty.jpg" alt="" width="46" height="46" loading="lazy"></span><div><b>Alekhya Chakrabarty</b><span>Marketer and author, Unstop</span></div></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7301298452460670976?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7301298452460670976%2C7301468118164418560%29" target="_blank" rel="noopener" aria-label="See Alekhya Chakrabarty’s comment on LinkedIn">View comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
@@ -619,8 +618,14 @@ input[type=range]{width:100%;accent-color:#9747FF}
         <article class="tcard tone-pink"><svg class="qm" aria-hidden="true"><use href="#i-quote"/></svg><span class="chip">Journey post</span><blockquote>The team always inspires us to be #Unstoppable and yes your sleepless nights.</blockquote><div class="who"><span class="av" aria-hidden="true"><img src="img/people/harshavardhan-bajoria.jpg" alt="" width="46" height="46" loading="lazy"></span><div><b>Harshavardhan Bajoria</b><span>Product Manager, AI and Innovation, Unstop</span></div></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7301298452460670976?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7301298452460670976%2C7301469756618940416%29" target="_blank" rel="noopener" aria-label="See Harshavardhan Bajoria’s comment on LinkedIn">View comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
         <article class="tcard tone-purple"><svg class="qm" aria-hidden="true"><use href="#i-quote"/></svg><span class="chip">Growth post</span><blockquote>Amazing work, Shubham! 🚀</blockquote><div class="who"><span class="av" aria-hidden="true"><img src="img/people/ansh-grover.jpg" alt="" width="46" height="46" loading="lazy"></span><div><b>Ansh Grover</b><span>Growth and Strategy, Blinkit</span></div></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7334921556264931329?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7334921556264931329%2C7334964400996405248%29" target="_blank" rel="noopener" aria-label="See Ansh Grover’s comment on LinkedIn">View comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
     </div>
-    <h3 class="rec-h">Recognition</h3>
-    <div class="rgrid">
+    <div class="sh rec-sh">
+      <h2 id="rec-h">Recognition</h2>
+      <div class="ctrl" data-for="rec-row">
+        <button type="button" data-dir="-1" aria-label="Previous recognition"><svg class="ic"><use href="#i-left"/></svg></button>
+        <button type="button" data-dir="1" aria-label="Next recognition"><svg class="ic"><use href="#i-right"/></svg></button>
+      </div>
+    </div>
+    <div class="rgrid" id="rec-row" tabindex="0" role="region" aria-label="Recognition, swipe sideways">
       <article class="rtile tone-pink"><span class="rico"><svg class="ic"><use href="#i-trophy"/></svg></span><span class="chip">Top honour · 2023</span><h4>Top 10 College Champion</h4><div class="chips"><b>Forbes India</b><b>Unstop Awards 2023</b><b>IRMA</b></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7052609381514772481/" target="_blank" rel="noopener">View the post <svg class="ic"><use href="#i-arrow"/></svg></a></article>
       <article class="rtile tone-blue"><span class="rico"><svg class="ic"><use href="#i-trophy"/></svg></span><span class="chip">Corporate case competitions</span><h4>Finals in 6 corporate cases</h4><div class="chips"><b>TATA Steel</b><b>V-Guard</b><b>ICICI Bank</b><b>Avalon Consulting</b><b>+2 more</b></div><a class="tcta" href="#cases">See the cases <svg class="ic"><use href="#i-arrow"/></svg></a></article>
       <article class="rtile tone-green"><span class="rico"><svg class="ic"><use href="#i-user"/></svg></span><span class="chip">Pre-placement offers</span><h4>3 offers won through cases</h4><div class="chips"><b>TATA Steel</b><b>V-Guard</b><b>Energy Swaraj Foundation</b></div><a class="tcta" href="#cases">See the offers <svg class="ic"><use href="#i-arrow"/></svg></a></article>
@@ -925,13 +930,13 @@ input[type=range]{width:100%;accent-color:#9747FF}
   render('corp');
 })();
 
-  (function(){var row=document.getElementById('say-row');if(!row)return;var ctrl=document.querySelector('.ctrl[data-for="say-row"]');if(!ctrl)return;var b=ctrl.querySelectorAll('button');
-    function step(){var c=row.querySelector('.tcard');return c?c.getBoundingClientRect().width+12:300}
+  ['say-row','rec-row'].forEach(function(id){var row=document.getElementById(id);if(!row)return;var ctrl=document.querySelector('.ctrl[data-for="'+id+'"]');if(!ctrl)return;var b=ctrl.querySelectorAll('button');
+    function step(){var c=row.firstElementChild;return c?c.getBoundingClientRect().width+12:300}
     function upd(){b[0].disabled=row.scrollLeft<4;b[1].disabled=row.scrollLeft+row.clientWidth>=row.scrollWidth-4}
     b.forEach(function(x){x.addEventListener('click',function(){row.scrollBy({left:step()*Number(x.getAttribute('data-dir')),behavior:'smooth'})})});
     row.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
     row.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){row.scrollBy({left:step(),behavior:'smooth'});e.preventDefault()}if(e.key==='ArrowLeft'){row.scrollBy({left:-step(),behavior:'smooth'});e.preventDefault()}});
-  })();
+  });
 </script>
 </body>
 </html>
