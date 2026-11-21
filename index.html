@@ -310,26 +310,25 @@ input[type=range]{width:100%;accent-color:#9747FF}
 .tcard .tcta:focus-visible{outline:3px solid #1A1530;outline-offset:3px}
 .rec-h{font-size:22px;margin:22px 0 10px}
 .rcard{min-height:0}
-.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
-.rtile{position:relative;display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:16px;border:.8px solid rgba(var(--c),.4);background:linear-gradient(160deg,rgba(var(--c),.28),rgba(255,255,255,.88) 70%);transition:transform .2s,box-shadow .2s}
+.rgrid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 2px 12px;scroll-behavior:smooth}
+.rgrid::-webkit-scrollbar{display:none}
+.rtile{flex:0 0 min(290px,82vw);scroll-snap-align:start;position:relative;display:flex;flex-direction:column;gap:8px;padding:14px;border-radius:16px;border:.8px solid rgba(var(--c),.4);background:linear-gradient(160deg,rgba(var(--c),.28),rgba(255,255,255,.88) 70%);transition:transform .2s,box-shadow .2s}
 .rtile:hover{transform:translateY(-4px);box-shadow:0 10px 0 rgba(var(--c),.25)}
-.rtile.rhero{grid-column:span 2}
-.rtile h4{font-family:var(--font-display);font-weight:600;font-size:20px;line-height:1.25;margin:0}
-.rtile.rhero h4{font-size:28px}
-.rtile p{font-size:15px;line-height:1.45;margin:0;color:#3B3650}
+.rtile h4{font-family:var(--font-display);font-weight:600;font-size:18px;line-height:1.25;margin:0}
+.rtile.rhero h4{font-size:22px}
+.rtile p{font-size:14px;line-height:1.4;margin:0;color:#3B3650}
 .rtile .rico{position:absolute;right:12px;top:12px;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgb(var(--c));color:#fff}
 .rtile.tone-pink .rico,.rtile.tone-green .rico{color:#1A1530}
 .rtile .rico .ic{width:20px;height:20px}
 .rtile .chip{align-self:flex-start;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.85);border:.8px solid rgba(var(--c),.5);font-size:11.5px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:#3B3650;max-width:calc(100% - 52px)}
 .rtile .chips{display:flex;flex-wrap:wrap;gap:6px}
-.rtile .chips b{padding:6px 12px;border-radius:999px;background:#fff;border:.8px solid rgba(var(--c),.55);font-size:14px;font-weight:700}
-.rlist{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:14.5px;line-height:1.35}
+.rtile .chips b{padding:4px 10px;border-radius:999px;background:#fff;border:.8px solid rgba(var(--c),.55);font-size:13px;font-weight:700}
+.rlist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13.5px;line-height:1.3}
 .rlist li b{display:block;font-family:var(--font-display);font-weight:600}
 .rtile .tcta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:42px;margin-top:auto;border-radius:12px;background:rgb(var(--c));box-shadow:0 3px 0 rgba(0,0,0,.18);color:#fff;font-weight:700;font-size:14px;text-decoration:none}
 .rtile.tone-pink .tcta{color:#1A1530}
 .rtile .tcta:hover{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.18)}
 .rtile .tcta .ic{width:16px;height:16px}
-@media(max-width:640px){.rtile.rhero{grid-column:auto}.rtile.rhero h4{font-size:24px}}
 
 /* footer */
 .foot3{width:min(1312px,calc(100% - 32px));margin:0 auto 32px;display:grid;grid-template-columns:1.3fr 1fr 1.6fr;gap:8px}
@@ -621,11 +620,11 @@ input[type=range]{width:100%;accent-color:#9747FF}
     </div>
     <h3 class="rec-h">Recognition</h3>
     <div class="rgrid">
-      <article class="rtile rhero tone-pink"><span class="rico"><svg class="ic"><use href="#i-trophy"/></svg></span><span class="chip">Top honour · 2023</span><h4>Top 10 College Champion</h4><p>Forbes India Unstop Awards 2023, among the best student achievers across India.</p><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7052609381514772481/" target="_blank" rel="noopener">View the post <svg class="ic"><use href="#i-arrow"/></svg></a></article>
-      <article class="rtile tone-blue"><span class="rico"><svg class="ic"><use href="#i-trophy"/></svg></span><span class="chip">6 corporate case competitions</span><h4>Finals and semi-finals at</h4><div class="chips"><b>TATA Steel</b><b>V-Guard</b><b>ICICI Bank</b><b>Avalon Consulting</b><b>Skilled Sapiens</b><b>Parley</b></div></article>
+      <article class="rtile rhero tone-pink"><span class="rico"><svg class="ic"><use href="#i-trophy"/></svg></span><span class="chip">Top honour · 2023</span><h4>Top 10 College Champion</h4><p>Forbes India Unstop Awards 2023.</p><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7052609381514772481/" target="_blank" rel="noopener">View the post <svg class="ic"><use href="#i-arrow"/></svg></a></article>
+      <article class="rtile tone-blue"><span class="rico"><svg class="ic"><use href="#i-trophy"/></svg></span><span class="chip">6 corporate case comps</span><h4>Finalist or semi-finalist at</h4><div class="chips"><b>TATA Steel</b><b>V-Guard</b><b>ICICI Bank</b><b>Avalon Consulting</b><b>Skilled Sapiens</b><b>Parley</b></div></article>
       <article class="rtile tone-green"><span class="rico"><svg class="ic"><use href="#i-user"/></svg></span><span class="chip">3 pre-placement offers</span><h4>Offers won through cases</h4><ul class="rlist"><li><b>TATA Steel</b> Steel-a-thon S9, PPI</li><li><b>V-Guard</b> Big Idea B-Plan 2022, PPI</li><li><b>Energy Swaraj Foundation</b> Envision 2021, PPO</li></ul></article>
-      <article class="rtile tone-purple"><span class="rico"><svg class="ic"><use href="#i-trophy"/></svg></span><span class="chip">More wins on LinkedIn</span><h4>Winner and podium finishes</h4><ul class="rlist"><li><b>National Winner</b> Petro Jam Oilympics, IIT (ISM) Dhanbad</li><li><b>National Winner</b> Zero One Infinity, IIM Indore</li><li><b>National Winner</b> Holocaust Case Study, VESIM</li><li><b>2nd Runner up</b> Envision 2021 and Ideas Worth Sharing</li></ul><a class="tcta" href="https://www.linkedin.com/in/shubham-mishra-540/details/honors/" target="_blank" rel="noopener">All honors on LinkedIn <svg class="ic"><use href="#i-arrow"/></svg></a></article>
-      <article class="rtile tone-pink"><span class="rico"><svg class="ic"><use href="#i-user"/></svg></span><span class="chip">Leadership</span><h4>Alumni Head, JNKVV</h4><p>Connected 1,600+ graduates on one platform and re-engaged 51 batches through 17 webinars (2017 to 2021).</p></article>
+      <article class="rtile tone-purple"><span class="rico"><svg class="ic"><use href="#i-trophy"/></svg></span><span class="chip">More wins on LinkedIn</span><h4>National Winner at 3 events</h4><ul class="rlist"><li><b>National Winner</b> Petro Jam, IIT (ISM) Dhanbad</li><li><b>National Winner</b> Zero One Infinity, IIM Indore</li><li><b>National Winner</b> Holocaust Case Study, VESIM</li></ul><a class="tcta" href="https://www.linkedin.com/in/shubham-mishra-540/details/honors/" target="_blank" rel="noopener">All honors on LinkedIn <svg class="ic"><use href="#i-arrow"/></svg></a></article>
+      <article class="rtile tone-pink"><span class="rico"><svg class="ic"><use href="#i-user"/></svg></span><span class="chip">Leadership</span><h4>Alumni Head, JNKVV</h4><p>Connected 1,600+ graduates on one platform; re-engaged 51 batches via 17 webinars.</p></article>
     </div>
   </section>
 
