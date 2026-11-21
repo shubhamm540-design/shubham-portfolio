@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:type" content="website"><meta property="og:title" content="Shubham Mishra: growth and lifecycle marketer"><meta property="og:description" content="Growth, lifecycle, SEO and community work, plus plans for D2C brands."><meta property="og:url" content="https://shubham-mishra.in/"><meta property="og:image" content="https://shubham-mishra.in/photo.jpg"><meta name="twitter:card" content="summary">
+<title>Shubham Mishra Growth Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: fixed pink nav pill, sticky lilac profile card (440px) on the left, tinted bento wrappers (864px) on the right. One visual world, light only. */
+:root{
+  --ink:#1D192B;
+  --muted:#5F5A72;
+  --white:#FFFFFF;
+  --navpink:#FFDEF5;
+  --lilac:#EFE3FF;
+  --purple:151,71,255;
+  --blue:0,124,230;
+  --pink:255,36,189;
+  --green:23,175,38;
+  --font-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --font-body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:130px}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.5}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,.viewport:focus-visible{outline:3px solid #9747FF;outline-offset:3px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;margin:0;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+svg.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* tones */
+.tone-blue{--c:var(--blue)}.tone-pink{--c:var(--pink)}.tone-green{--c:var(--green)}.tone-purple{--c:var(--purple)}
+.tint{background:rgba(var(--c),.1);border:.8px solid rgba(var(--c),.4)}
+.tint2{background:rgba(var(--c),.15);border:.8px solid rgba(var(--c),.4)}
+.ibox{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(var(--c),.08);border:.8px solid rgba(var(--c),.4);color:rgb(var(--c))}
+
+/* header */
+.hdr{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:30;width:min(1312px,calc(100% - 32px));background:var(--navpink);border-radius:20px;padding:8px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;padding:0 14px;font-family:var(--font-display);font-weight:600;font-size:26px;letter-spacing:-.03em;text-decoration:none;white-space:nowrap}
+.logo svg{width:34px;height:34px;flex:none}
+.hdr nav{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.hdr nav::-webkit-scrollbar{display:none}
+.nl{display:flex;align-items:center;gap:10px;padding:8px 22px 8px 10px;border-radius:16px;border:1.6px solid rgba(255,36,189,.14);text-decoration:none;font-size:15px;white-space:nowrap;background:rgba(255,255,255,.35)}
+.nl .ni{width:34px;height:34px;border-radius:10px;background:rgba(255,36,189,.16);display:grid;place-items:center;color:#C40E93}
+.nl:hover{background:rgba(255,255,255,.8)}
+.nl.hire{font-weight:600}
+
+/* layout */
+.layout{width:min(1312px,calc(100% - 32px));margin:0 auto;padding:128px 0 24px;display:grid;grid-template-columns:440px minmax(0,1fr);gap:8px;align-items:start}
+main{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
+
+/* profile */
+.about-box{position:sticky;top:128px;background:rgba(151,71,255,.4);border:.8px solid #9747FF;border-radius:24px;padding:6px;display:grid;grid-template-columns:minmax(0,1fr);gap:6px;min-width:0}
+.about-card{background:var(--lilac);border-radius:21px;padding:32px 32px 36px;min-width:0}
+.photo-row{display:flex;gap:18px;align-items:flex-start;position:relative}
+.photo{position:relative;width:228px;height:228px;flex:none}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:20px;display:block}
+.hello{position:absolute;left:-14px;bottom:14px;transform:rotate(-20deg);background:#9747FF;color:#fff;font-weight:600;font-size:14px;padding:6px 14px;border-radius:999px;border:2px solid var(--lilac)}
+.socials{display:grid;gap:8px}
+.socials a{width:44px;height:44px;border-radius:14px;border:.8px solid rgba(151,71,255,.4);background:rgba(255,255,255,.55);display:grid;place-items:center;color:var(--ink)}
+.socials a:hover{background:#fff}
+.about-card h1{font-size:47px;line-height:1.12;margin:26px 0 12px;letter-spacing:-.04em}
+.roles{max-width:100%;overflow:hidden;white-space:nowrap;background:rgba(151,71,255,.12);border:.8px solid rgba(151,71,255,.4);border-radius:999px;padding:7px 0;font-size:15px;margin-bottom:16px}
+.roles .tr{display:inline-flex}
+.roles .tr span{padding:0 6px 0 10px;display:inline-flex;align-items:center;gap:10px}
+.roles .tr span::after{content:"";width:7px;height:7px;border-radius:50%;background:#9747FF}
+@media (prefers-reduced-motion:no-preference){
+  .roles .tr{animation:roll 22s linear infinite}
+  @keyframes roll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+}
+@media (prefers-reduced-motion:reduce){
+  .roles{white-space:normal;border-radius:18px;padding:8px 10px}
+  .roles .tr{flex-wrap:wrap}
+  .roles .tr .dup{display:none}
+}
+.about-card .bio{font-size:16px;line-height:1.55}
+.crow{background:var(--lilac);border-radius:20px;padding:14px 24px 14px 14px;display:flex;align-items:center;gap:14px;text-decoration:none}
+.crow .ibox{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.55)}
+.crow b{font-family:var(--font-display);font-weight:500;font-size:17px;flex:none;min-width:76px}
+.crow > span:last-child{margin-left:auto;font-size:17px;font-weight:500;letter-spacing:-.01em;text-align:right;overflow-wrap:anywhere}
+
+/* wrappers */
+.wrap{border-radius:24px;padding:32px}
+.wrap.plain{background:#fff;border:.8px solid rgba(151,71,255,.4)}
+.sh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+.sh h2{font-size:34px;line-height:1.15}
+.center{justify-content:center;text-align:center}
+.lede{font-size:16px;color:var(--muted);margin:-10px 0 22px;max-width:62ch}
+.pillbtn{display:inline-flex;align-items:center;gap:6px;padding:12px 16px;border-radius:100px;background:rgba(var(--c),.1);border:.8px solid rgba(var(--c),.4);font-size:15px;text-decoration:none}
+
+/* controls */
+.ctrl{display:flex;align-items:center;gap:8px}
+.ctrl button{width:46px;height:46px;border-radius:14px;border:.8px solid rgba(var(--c),.5);background:rgba(255,255,255,.7);color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.ctrl button:hover:not(:disabled){background:rgb(var(--c));color:#fff}
+.ctrl button:disabled{opacity:.4;cursor:default}
+.ctrl .count{font-weight:600;font-size:15px;min-width:54px;text-align:center;font-variant-numeric:tabular-nums}
+.stage{border-radius:17px;padding:8px;background:rgba(var(--c),.1);border:.8px solid rgba(var(--c),.4)}
+.prog{height:4px;border-radius:4px;background:rgba(var(--c),.18);margin:2px 4px 8px;overflow:hidden}
+.prog i{display:block;height:100%;background:rgb(var(--c));border-radius:4px;transition:width .3s ease}
+.viewport{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.viewport::-webkit-scrollbar{display:none}
+.slides{display:flex;gap:8px}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:14px}
+.dots button{width:10px;height:10px;border-radius:50%;border:1.5px solid rgb(var(--c));background:transparent;padding:0;cursor:pointer}
+.dots button[aria-current="true"]{background:rgb(var(--c))}
+
+/* work slides */
+.wslide{flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:1.1fr 1fr;gap:8px}
+.visual{border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:center;gap:14px;min-height:330px}
+.winfo{padding:18px 14px;display:flex;flex-direction:column;gap:12px}
+.tag{align-self:flex-start;display:inline-flex;padding:5px 14px;border-radius:100px;background:rgba(var(--c),.12);border:.8px solid rgba(var(--c),.45);font-size:13.5px;font-weight:500}
+.winfo h3{font-size:28px;line-height:1.15}
+.winfo p{font-size:16px;color:#3B3650}
+.foot{margin-top:auto;font-size:14px;color:var(--muted);font-weight:500}
+.pairs{display:grid;gap:16px}
+.pair .nm{display:flex;justify-content:space-between;gap:10px;font-size:15px;font-weight:500;margin-bottom:6px}
+.pair .nm b{font-family:var(--font-display);font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+.bar{display:grid;grid-template-columns:50px 1fr;gap:8px;align-items:center;font-size:12.5px;color:var(--muted);font-weight:500;margin-bottom:4px}
+.bar .t{height:13px;border-radius:999px;background:rgba(29,25,43,.1);overflow:hidden}
+.bar .t i{display:block;height:100%;border-radius:999px;background:#9A95AD}
+.bar.a .t i{background:rgb(var(--c))}
+.bigs{display:grid;gap:10px}
+.big{background:rgba(255,255,255,.7);border:.8px solid rgba(var(--c),.4);border-radius:14px;padding:14px 16px;display:flex;align-items:baseline;gap:12px}
+.big strong{font-family:var(--font-display);font-size:40px;line-height:1;font-weight:500;letter-spacing:-.03em;min-width:110px}
+.big span{font-size:15px;color:var(--muted)}
+
+/* brand slides */
+.bslide{flex:0 0 100%;scroll-snap-align:start;border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.bslide .tag{background:rgba(255,255,255,.7)}
+.bslide h3{font-size:32px}
+.bt-tabs{display:flex;gap:8px;margin:0 0 16px;flex-wrap:wrap}
+.bt-tab{font:600 15px var(--font-display);padding:11px 18px;border-radius:100px;background:rgba(255,255,255,.65);border:.8px solid rgba(var(--blue),.45);color:#1D192B;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.bt-tab .n{font-weight:600;font-size:12.5px;padding:2px 9px;border-radius:100px;background:rgba(var(--blue),.15)}
+.bt-tab[aria-selected="true"]{background:#0F5FBF;color:#fff;border-color:#0F5FBF}
+.bt-tab[aria-selected="true"] .n{background:rgba(255,255,255,.25)}
+.bt-tab:focus-visible{outline:3px solid #1D192B;outline-offset:2px}
+.bslide{position:relative}
+.bslide .open{align-self:flex-start;display:inline-flex;gap:6px;align-items:center;padding:9px 18px;border-radius:999px;background:#fff;border:.8px solid rgba(var(--c),.6);font-size:15px;font-weight:600;text-decoration:none;color:var(--ink)}
+.bslide .open:after{content:"";position:absolute;inset:0;border-radius:16px}
+.bslide .open:focus-visible{outline:none}
+.bslide .open:focus-visible:after{outline:3px solid #9747FF;outline-offset:3px}
+.bslide:hover .open{background:rgb(var(--c));color:#fff;border-color:transparent}
+.bslide .fact a{position:relative;z-index:2}
+.fact{font-size:14.5px;background:rgba(255,255,255,.7);border:.8px dashed rgba(var(--c),.6);border-radius:14px;padding:10px 14px}
+.fact b{font-weight:600}
+.fact a{font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.plays{display:grid;gap:10px}
+.plays li{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:start;font-size:15.5px}
+.plays li em{font-style:normal;font-weight:600;font-size:12.5px;background:rgba(255,255,255,.7);border:.8px solid rgba(var(--c),.45);border-radius:999px;padding:3px 10px;text-align:center;margin-top:1px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills span{border-radius:12px;padding:6px 12px;font-size:14px;font-weight:500;background:rgb(var(--c));color:#fff}
+.pills span.p{background:rgba(255,255,255,.75);color:var(--ink);border:.8px solid rgba(var(--c),.5)}
+.disc{font-size:14px;color:var(--muted);margin-top:14px;max-width:78ch}
+@media (min-width:1100px){.brandwrap .bslide{flex-basis:calc(50% - 4px)}}
+
+/* services */
+.cards2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.svc{border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:12px;min-height:290px}
+.svc .ibox{margin-bottom:22px;background:rgba(255,255,255,.6)}
+.svc h3{font-size:24px}
+.svc p{font-size:16px;line-height:1.5}
+.svc .pillbtn{margin-top:auto;align-self:flex-start;font-weight:500}
+
+/* counters */
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.counter{display:flex;align-items:center;gap:14px}
+.counter strong{display:block;white-space:nowrap;font-family:var(--font-display);font-weight:500;font-size:30px;line-height:1.05;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.counter span{font-size:14.5px;color:#3B3650;display:block}
+
+/* experience */
+.xgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.xcard{border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.xtop{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14.5px}
+.xtop .d{display:flex;align-items:center;gap:8px;color:#3B3650}
+.xtop .d svg{width:18px;height:18px;color:rgb(var(--c))}
+.xtop .co{font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:-.01em;text-align:right}
+.xcard h3{font-size:21px;line-height:1.2}
+.xcard p{font-size:15.5px;color:#3B3650}
+
+/* case competitions */
+.cc-tabs{display:flex;gap:8px;margin:6px 0 14px;flex-wrap:wrap}
+.cc-tab{font:600 15px var(--font-display);padding:11px 20px;border-radius:100px;background:rgba(255,255,255,.6);border:.8px solid rgba(var(--purple),.4);color:#1D192B;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.cc-tab .n{font-weight:600;font-size:12.5px;padding:2px 9px;border-radius:100px;background:rgba(var(--purple),.15)}
+.cc-tab[aria-selected="true"]{background:#9747FF;color:#fff;border-color:#9747FF}
+.cc-tab[aria-selected="true"] .n{background:rgba(255,255,255,.25)}
+.cc-tab:focus-visible,.ctile:focus-visible,.mclose:focus-visible{outline:3px solid #1D192B;outline-offset:2px}
+.cc-note{font-size:14.5px;color:#3B3650;margin:0 0 12px}
+.ctiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
+.ctile{border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:10px;min-width:0;text-align:left;cursor:pointer;font:inherit;color:inherit;transition:transform .15s}
+.ctile:hover{transform:translateY(-2px)}
+.ctop{display:flex;align-items:center;gap:12px}
+.badge{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font:700 16px var(--font-display);color:#fff;letter-spacing:-.02em}
+.ctop .meta{min-width:0;display:flex;flex-direction:column}
+.ctop .org{font:600 15px var(--font-display);line-height:1.2}
+.ctop .when{font-size:13px;color:#3B3650}
+.ctile h3{font-size:19px;line-height:1.2;font-weight:600}
+.rk{align-self:flex-start;font-size:12.5px;font-weight:600;padding:4px 12px;border-radius:100px;background:rgba(var(--c),.18);border:.8px solid rgba(var(--c),.5)}
+.cprob{font-size:14.5px;color:#3B3650;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cc-more{font:600 14px var(--font-display);display:inline-flex;align-items:center;gap:6px;color:#1D192B}
+.cc-more svg{width:16px;height:16px}
+.recog{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.recog>div{border-radius:16px;padding:16px 18px;font-size:14.5px;display:flex;flex-direction:column;gap:4px}
+.recog b{font:700 15.5px var(--font-display)}
+.recog a{color:inherit;font-weight:600;text-decoration:underline}
+.mback{position:fixed;inset:0;background:rgba(29,25,43,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}
+.mback.open{display:flex}
+.modal{background:#fff;border-radius:22px;max-width:760px;width:100%;max-height:88vh;overflow:auto;padding:28px;position:relative;border:.8px solid rgba(var(--purple),.4)}
+.mclose{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:.8px solid rgba(var(--purple),.4);background:#EFE3FF;cursor:pointer;font-size:22px;line-height:1}
+.mhead{display:flex;gap:14px;align-items:center;padding-right:44px}
+.mhead h3{font-size:24px;line-height:1.15}
+.mhead .when{font-size:14px;color:#3B3650}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.modal h4{font:700 14px var(--font-display);letter-spacing:.02em;text-transform:uppercase;color:#7B2FE0;margin:18px 0 6px}
+.modal p,.modal li{font-size:15.5px;color:#2A2540}
+.modal ul{padding-left:20px;display:grid;gap:5px;list-style:disc}
+.proof{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}
+.proof figure{margin:0;display:flex;flex-direction:column;gap:4px;max-width:240px}
+.proof img{border-radius:10px;border:.8px solid rgba(var(--purple),.3);max-width:100%;height:auto;background:#f6f0ff}
+.proof figcaption{font-size:12.5px;color:#3B3650}
+.mlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.mlinks a{font:600 14px var(--font-display);padding:8px 16px;border-radius:100px;background:rgba(var(--purple),.12);border:.8px solid rgba(var(--purple),.45);color:#1D192B;text-decoration:none}
+.mlinks a:hover{background:rgba(var(--purple),.25)}
+@media(max-width:640px){.modal{padding:20px;border-radius:18px}.mhead h3{font-size:20px}}
+
+.tbanner{height:150px;border-radius:12px;background:#fff;border:.8px solid rgba(var(--c),.35);display:grid;place-items:center;overflow:hidden;margin:-4px -4px 2px}
+.tbanner img{width:100%;height:100%;object-fit:contain;display:block}
+.tbanner.num{background:rgba(var(--c),.16);font:600 46px/1 var(--font-display);letter-spacing:-.03em;text-align:center;padding:10px;font-variation-settings:"opsz" 96}
+.tbanner.num small{display:block;font:500 13px var(--font-body);letter-spacing:0;margin-top:8px;color:#3B3650}
+.tstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(54px,1fr));gap:10px;border-top:1px dashed rgba(var(--c),.5);padding-top:10px;margin-top:auto}
+.tstats>span{min-width:0}
+.tstats b{display:block;font:600 20px/1.05 var(--font-display);letter-spacing:-.02em;font-variant-numeric:lining-nums;white-space:nowrap}
+.tstats>span>span{font-size:12px;color:#3B3650;line-height:1.2;display:block;}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.edu div{border-radius:16px;padding:18px 22px;font-size:15px}
+.edu b{display:block;font-family:var(--font-display);font-weight:600;font-size:17px;margin-bottom:2px}
+
+/* ledger */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.filters button{font:inherit;font-size:14.5px;font-weight:500;padding:8px 16px;border-radius:100px;border:.8px solid rgba(151,71,255,.45);background:rgba(151,71,255,.08);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:#9747FF;color:#fff;border-color:#9747FF}
+.ledger{display:grid;gap:8px}
+.lrow{display:grid;grid-template-columns:minmax(160px,.9fr) 2fr auto;gap:10px 18px;align-items:center;border-radius:16px;padding:14px 18px}
+.lrow[hidden]{display:none}
+.lname{font-weight:600;line-height:1.25}
+.lname small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.lchip{font-family:var(--font-display);font-weight:600;font-size:18px;background:rgba(255,255,255,.75);border:.8px solid rgba(var(--c),.5);border-radius:12px;padding:5px 12px;white-space:nowrap;min-width:92px;text-align:center}
+.src{font-size:13px;color:var(--muted);margin-top:14px}
+
+/* calculator */
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px 22px;margin:4px 0 20px}
+.field label{display:flex;justify-content:space-between;gap:10px;font-weight:500;font-size:14.5px;margin-bottom:6px}
+.field output{font-family:var(--font-display);font-weight:600;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:#9747FF}
+.cbar{display:grid;grid-template-columns:140px 1fr 110px;gap:10px;align-items:center;font-size:14.5px;margin-bottom:8px}
+.cbar .t{height:20px;border-radius:999px;background:rgba(29,25,43,.1);overflow:hidden}
+.cbar .t i{display:block;height:100%;border-radius:999px;background:#9A95AD}
+.cbar.up .t i{background:#9747FF}
+.cbar .v{font-family:var(--font-display);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.result{font-weight:500;margin-top:12px}
+.result strong{font-family:var(--font-display);font-size:28px;font-weight:600;background:rgba(255,255,255,.75);border:.8px solid rgba(151,71,255,.5);border-radius:12px;padding:2px 14px;margin-left:8px}
+
+/* cta */
+.cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:40px}
+.cta small{display:block;font-size:14px;margin-bottom:8px}
+.cta h2{font-size:44px;line-height:1.1}
+.cta p{margin-top:10px;color:#3B3650;max-width:42ch}
+.pbtn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:206px;height:62px;padding:0 24px;border-radius:14px;background:rgba(255,36,189,.12);border:.8px solid rgba(255,36,189,.5);font-weight:600;font-size:16px;text-decoration:none;box-shadow:0 5px 0 rgba(255,36,189,.35)}
+.pbtn:hover{transform:translateY(2px);box-shadow:0 3px 0 rgba(255,36,189,.35)}
+
+/* testimonials */
+.say-lede{margin:-4px 0 18px;color:#3B3650;max-width:60ch;font-size:16px}
+.tgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tgrid .tcard{position:relative;min-height:0}
+.tgrid .tcard.feat{grid-column:1/-1}
+.tscroll{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.tscroll::-webkit-scrollbar{display:none}
+.tcard{flex:0 0 320px;min-height:300px;scroll-snap-align:start;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:18px;background-clip:padding-box;border:.8px solid rgba(var(--c),.35)}
+.tcard .q{color:rgb(var(--c))}
+.tcard .q svg{width:34px;height:34px}
+.tcard p,.tcard blockquote{font-size:17px;line-height:1.45;margin:0}
+.tcard blockquote{font-family:var(--font-display);font-weight:500;font-size:21px;line-height:1.35}
+.tcard.feat blockquote{font-size:28px;line-height:1.25;max-width:26ch}
+.tcard .who{margin-top:auto;display:flex;align-items:center;gap:12px}
+.tcard .av{flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:rgba(var(--c),.18);border:.8px solid rgba(var(--c),.5);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:15px}
+.tcard .who b{display:block;font-family:var(--font-display);font-weight:600;font-size:15.5px}
+.tcard .who span{font-size:13.5px;color:var(--muted)}
+.tcard .onpost{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.65);border:.8px dashed rgba(var(--c),.4);font-size:12.5px;color:var(--muted);line-height:1.3}
+.tcard .onpost em{display:block;font-style:normal;color:#1A1530;font-weight:600;font-size:13px}
+.tcard .spark{flex:0 0 auto;width:46px;height:22px;color:rgb(var(--c))}
+.tcard .tcta{display:inline-flex;align-items:center;justify-content:center;gap:8px;align-self:flex-start;min-height:44px;padding:0 18px;border-radius:12px;background:rgba(var(--c),.14);border:.8px solid rgba(var(--c),.55);box-shadow:0 4px 0 rgba(var(--c),.35);font-weight:600;font-size:14.5px;text-decoration:none;color:#1A1530}
+.tcard .tcta:hover{transform:translateY(2px);box-shadow:0 2px 0 rgba(var(--c),.35)}
+.tcard .tcta:focus-visible{outline:3px solid #1A1530;outline-offset:3px}
+.rec-h{font-size:22px;margin:22px 0 10px}
+.rcard{min-height:0}
+@media(max-width:700px){.tgrid{grid-template-columns:1fr}.tcard.feat blockquote{font-size:24px}.tcard blockquote{font-size:19px}}
+
+/* footer */
+.foot3{width:min(1312px,calc(100% - 32px));margin:0 auto 32px;display:grid;grid-template-columns:1.3fr 1fr 1.6fr;gap:8px}
+.fbox{border-radius:24px;padding:32px}
+.fbox h3{font-size:24px;margin-bottom:16px}
+.flinks{display:flex;flex-wrap:wrap;gap:8px}
+.flinks a{padding:9px 18px;border-radius:12px;background:rgba(255,255,255,.7);border:.8px solid rgba(var(--c),.4);text-decoration:none;font-size:15px}
+.flinks a:hover{background:#fff}
+.finfo{display:grid;gap:10px}
+.finfo a,.finfo div{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.7);font-size:15px;text-decoration:none;overflow-wrap:anywhere}
+.fbox p{font-size:15.5px;color:#3B3650;margin-bottom:16px}
+.copy{text-align:center;font-size:14px;color:var(--muted);padding:0 0 32px}
+
+@media (max-width:991px){
+  .layout{grid-template-columns:1fr;padding-top:112px}
+  .about-box{position:static}
+  .hdr{top:10px;padding:6px}
+  .logo{font-size:0;gap:0;padding:0 6px}
+  .logo svg{width:34px;height:34px}
+  .wslide{grid-template-columns:1fr}
+  .visual{min-height:0}
+  .foot3{grid-template-columns:1fr}
+  .counters{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:20px}
+  .sh h2{font-size:28px}
+  .about-card{padding:22px}
+  .photo{width:min(228px,100%);height:auto;aspect-ratio:1}
+  .photo-row{flex-wrap:wrap}
+  .socials{grid-auto-flow:column}
+  .about-card h1{font-size:38px;margin-top:22px}
+  .cards2,.xgrid,.edu{grid-template-columns:1fr}
+  .svc{padding:22px;min-height:0}
+  .cta{padding:24px}
+  .cta h2{font-size:34px}
+  .plays li{grid-template-columns:1fr;gap:4px}
+  .plays li em{justify-self:start}
+  .lrow{grid-template-columns:1fr}
+  .lchip{justify-self:start}
+  .cbar{grid-template-columns:1fr;gap:4px}
+  .cbar .v{text-align:left}
+  .counters{grid-template-columns:1fr}
+  .tcard{flex-basis:84%}
+  .nl{padding:6px 14px 6px 6px}
+  .nl .ni{width:30px;height:30px}
+  .crow{padding:12px}
+  .crow b{min-width:0;font-size:15px}
+  .crow > span:last-child{font-size:14px;letter-spacing:0}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7zM12 22V12M3 7l9 5 9-5"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4a3 3 0 0 0 3 5M17 6h3a3 3 0 0 1-3 5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14a5 5 0 0 0 8 0M9 9.5v.01M15 9.5v.01"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M7 7h4v5a4 4 0 0 1-4 4M15 7h4v5a4 4 0 0 1-4 4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-rupee" viewBox="0 0 24 24"><path d="M7 5h10M7 9h10M7 5c6 0 6 8-1 8l7 7"/></symbol>
+  </defs>
+</svg>
+
+<header class="hdr">
+  <a class="logo" href="#home" aria-label="Shubham Mishra, home">
+    <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#9747FF"/><circle cx="17" cy="9.5" r="3.4" fill="#fff"/><circle cx="17" cy="24.5" r="3.4" fill="#fff"/><circle cx="9.5" cy="17" r="3.4" fill="#fff"/><circle cx="24.5" cy="17" r="3.4" fill="#fff"/></svg>
+    Shubham
+  </a>
+  <nav aria-label="Sections">
+    <a class="nl" href="#home"><span class="ni"><svg class="ic"><use href="#i-home"/></svg></span>Home</a>
+    <a class="nl" href="#work"><span class="ni"><svg class="ic"><use href="#i-folder"/></svg></span>Work</a>
+    <a class="nl" href="#brands"><span class="ni"><svg class="ic"><use href="#i-brief"/></svg></span>For brands</a>
+    <a class="nl" href="#skills"><span class="ni"><svg class="ic"><use href="#i-user"/></svg></span>Skills</a>
+    <a class="nl" href="#cases"><span class="ni"><svg class="ic"><use href="#i-trophy"/></svg></span>Cases</a>
+    <a class="nl" href="#experience"><span class="ni"><svg class="ic"><use href="#i-clock"/></svg></span>Experience</a>
+    <a class="nl hire" href="#contact"><span class="ni"><svg class="ic"><use href="#i-mail"/></svg></span>Hire me</a>
+  </nav>
+</header>
+
+<div class="layout" id="home">
+
+<aside class="about-box" id="aboutBox" aria-label="Profile">
+  <div class="about-card">
+    <div class="photo-row">
+      <div class="photo">
+        <img src="photo.jpg" alt="Shubham Mishra smiling in a navy blazer" width="228" height="228">
+        <span class="hello">👋 Hello</span>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/shubham-mishra-540/" aria-label="LinkedIn"><svg class="ic"><use href="#i-in"/></svg></a>
+        <a href="https://youtu.be/Dq6e4cAkYAA" aria-label="YouTube video"><svg class="ic"><use href="#i-yt"/></svg></a>
+        <a href="#contact" aria-label="Email"><svg class="ic"><use href="#i-mail"/></svg></a>
+      </div>
+    </div>
+    <h1>Shubham Mishra</h1>
+    <div class="roles" aria-label="What I do">
+      <div class="tr">
+        <span>Growth marketer</span><span>Lifecycle</span><span>SEO and organic</span><span>Email and push</span><span>Retention</span><span>Gamification</span>
+        <span class="dup">Growth marketer</span><span class="dup">Lifecycle</span><span class="dup">SEO and organic</span><span class="dup">Email and push</span><span class="dup">Retention</span><span class="dup">Gamification</span>
+      </div>
+    </div>
+    <p class="bio">I'm based in New Delhi and work as Growth Marketing Manager at Unstop. I grow products through organic channels and keep users coming back, with lifecycle, SEO, email, push and gamification.</p>
+  </div>
+  <a class="crow tone-purple" href="#contact"><span class="ibox"><svg class="ic"><use href="#i-mail"/></svg></span><b>Email</b><span>Shubhamm540@gmail.com</span></a>
+  <a class="crow tone-purple" href="https://www.linkedin.com/in/shubham-mishra-540/"><span class="ibox"><svg class="ic"><use href="#i-in"/></svg></span><b>LinkedIn</b><span>shubham-mishra-540</span></a>
+</aside>
+
+<main>
+
+  <!-- Carousel 1: my work -->
+  <section class="wrap tint tone-green" id="work" aria-labelledby="work-h">
+    <div class="sh">
+      <h2 id="work-h">My Work</h2>
+      <div class="ctrl" data-for="c1">
+        <button type="button" data-dir="-1" aria-label="Previous project"><svg class="ic"><use href="#i-left"/></svg></button>
+        <span class="count" aria-live="polite">1 / 8</span>
+        <button type="button" data-dir="1" aria-label="Next project"><svg class="ic"><use href="#i-right"/></svg></button>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="prog"><i id="p1"></i></div>
+      <div class="viewport" id="c1" tabindex="0" role="region" aria-roledescription="carousel" aria-label="My work, swipe or use arrows"><div class="slides" id="s1"></div></div>
+    </div>
+    <div class="dots" id="d1"></div>
+  </section>
+
+  <!-- Carousel 2: what I would do for brands -->
+  <section class="wrap tint tone-blue brandwrap" id="brands" aria-labelledby="brands-h">
+    <div class="sh">
+      <h2 id="brands-h">If I Join Your Brand</h2>
+      <div class="ctrl" data-for="c2">
+        <button type="button" data-dir="-1" aria-label="Previous brand"><svg class="ic"><use href="#i-left"/></svg></button>
+        <span class="count" aria-live="polite">1 / 2</span>
+        <button type="button" data-dir="1" aria-label="Next brand"><svg class="ic"><use href="#i-right"/></svg></button>
+      </div>
+    </div>
+    <p class="lede">What I would do at seventeen brands across five industries. Pick an industry, then open a card. Each starts with a public fact, then lists the plays I would test and the metric I would move.</p>
+    <div class="bt-tabs" id="bt-tabs" role="tablist" aria-label="Industry"></div>
+    <div class="viewport" id="c2" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Plans for Beauty &amp; Personal Care brands, swipe or use arrows"><div class="slides" id="s2"></div></div>
+    <div class="dots" id="d2"></div>
+    <p class="disc">These are hypotheses built from public information. I have not seen any of these brands' internal data, so my first step in any role is an audit of the funnel, cohorts and channels.</p>
+  </section>
+
+  <!-- What I do -->
+  <section class="wrap plain" id="skills" aria-labelledby="skills-h">
+    <div class="sh center"><h2 id="skills-h">What I Do</h2></div>
+    <div class="cards2">
+      <article class="svc tint tone-blue"><span class="ibox"><svg class="ic"><use href="#i-search"/></svg></span><h3>SEO and organic</h3><p>Content clusters and community content that earn search traffic and shares.</p><a class="pillbtn" href="#proof">Organic search 2 → 5,300 a month</a></article>
+      <article class="svc tint2 tone-pink"><span class="ibox"><svg class="ic"><use href="#i-bell"/></svg></span><h3>Email and push</h3><p>Segmented journeys, tested creatives and send logic in MoEngage.</p><a class="pillbtn" href="#proof">CTR 1.2% → 3.9%, CTOR 8% → 27%</a></article>
+      <article class="svc tint tone-pink"><span class="ibox"><svg class="ic"><use href="#i-repeat"/></svg></span><h3>Retention and lifecycle</h3><p>Onboarding, activation, habit and retention mapped across app, email and push.</p><a class="pillbtn" href="#proof">D30 retention 1.3% → 4.1%</a></article>
+      <article class="svc tint tone-blue"><span class="ibox"><svg class="ic"><use href="#i-cube"/></svg></span><h3>Product creation</h3><p>Launches built from demand and trend signals, with a freemium and token model.</p><a class="pillbtn" href="#work">17 products in 12 months</a></article>
+      <article class="svc tint tone-blue"><span class="ibox"><svg class="ic"><use href="#i-trophy"/></svg></span><h3>Gamification</h3><p>Branded IPs, leaderboards and reward loops that turn users into advocates.</p><a class="pillbtn" href="#proof">UGC 0 → 300+ posts a month</a></article>
+      <article class="svc tint2 tone-pink"><span class="ibox"><svg class="ic"><use href="#i-chart"/></svg></span><h3>Analytics</h3><p>Cohort and attribution models in Google Analytics and MoEngage, plus SQL and Excel.</p><a class="pillbtn" href="#work">Found a 3x converting segment</a></article>
+    </div>
+  </section>
+
+  <!-- Counters -->
+  <section class="wrap tint tone-green" aria-label="Headline numbers">
+    <div class="counters">
+      <div class="counter"><span class="ibox"><svg class="ic"><use href="#i-trend"/></svg></span><div><strong>100K</strong><span>Monthly users, from 2K</span></div></div>
+      <div class="counter"><span class="ibox"><svg class="ic"><use href="#i-repeat"/></svg></span><div><strong>4.1%</strong><span>D30 retention, from 1.3%</span></div></div>
+      <div class="counter"><span class="ibox"><svg class="ic"><use href="#i-search"/></svg></span><div><strong>5,300</strong><span>Organic searches a month</span></div></div>
+      <div class="counter"><span class="ibox"><svg class="ic"><use href="#i-rupee"/></svg></span><div><strong>₹1.35 Cr</strong><span>Saved a year on content</span></div></div>
+    </div>
+  </section>
+
+  <!-- Case competitions -->
+  <section class="wrap tint tone-purple" id="cases" aria-labelledby="cc-h">
+    <div class="sh"><h2 id="cc-h">Case Competitions</h2></div>
+    <p class="lede">A messy brief, a deadline and a panel that wants numbers. Open any tile to see the problem, what we proposed and the proof.</p>
+    <div class="counters">
+      <div class="counter"><span class="ibox"><svg class="ic"><use href="#i-trophy"/></svg></span><div><strong>9,200+</strong><span>Teams beaten to reach Tata Steel-a-thon finals</span></div></div>
+      <div class="counter"><span class="ibox"><svg class="ic"><use href="#i-trend"/></svg></span><div><strong>5,622</strong><span>Teams in ICICI Beat The Curve, IRMA campus winners</span></div></div>
+      <div class="counter"><span class="ibox"><svg class="ic"><use href="#i-brief"/></svg></span><div><strong>3</strong><span>PPI and PPO offers from competitions</span></div></div>
+      <div class="counter"><span class="ibox"><svg class="ic"><use href="#i-user"/></svg></span><div><strong>Top 10</strong><span>Forbes India Unstop College Champions 2023</span></div></div>
+    </div>
+    <div class="cc-tabs" role="tablist" aria-label="Competition type">
+      <button class="cc-tab" role="tab" id="tab-corp" aria-selected="true" aria-controls="panel-cc" data-tab="corp">Corporate Competitions <span class="n" id="n-corp"></span></button>
+      <button class="cc-tab" role="tab" id="tab-bs" aria-selected="false" aria-controls="panel-cc" data-tab="bs" tabindex="-1">B-Schools &amp; E-Schools <span class="n" id="n-bs"></span></button>
+    </div>
+    <div id="panel-cc" role="tabpanel" aria-labelledby="tab-corp">
+      <p class="cc-note" id="cc-note"></p>
+      <div class="ctiles" id="ctiles"></div>
+    </div>
+    <div class="recog" aria-label="Recognitions">
+      <div class="tint tone-pink"><b>Pre-placement offers</b><span>Tata Steel-a-thon (PPI), V-Guard Big Idea (PPI) and Envision 2021 (PPO from Energy Swaraj Foundation).</span></div>
+      <div class="tint tone-blue"><b>Forbes India Unstop Top 10 College Champion</b><span>Unstop Awards, April 2023. <a href="https://www.linkedin.com/feed/update/urn:li:activity:7052609381514772481/" target="_blank" rel="noopener">See the post</a></span></div>
+    </div>
+  </section>
+
+  <div class="mback" id="mback" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="m-title" id="modal">
+      <button class="mclose" type="button" id="mclose" aria-label="Close">×</button>
+      <div id="mbody"></div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <section class="wrap tint tone-blue" id="experience" aria-labelledby="xp-h">
+    <div class="sh"><h2 id="xp-h">Experiences</h2></div>
+    <div class="xgrid">
+      <article class="xcard tint tone-blue"><div class="xtop"><span class="d"><svg class="ic"><use href="#i-cal"/></svg>Feb 2026 – Present</span><span class="co">Unstop</span></div><h3>Growth Marketing Manager</h3><p>Community building, brand partnerships and campus marketing. Ambassadors 34 → 118, clubs 19 → 64, partnership conversion 38% → 51%.</p></article>
+      <article class="xcard tint tone-blue"><div class="xtop"><span class="d"><svg class="ic"><use href="#i-cal"/></svg>Dec 2023 – Jun 2025</span><span class="co">Unstop</span></div><h3>Program Manager, Practice</h3><p>Sole owner of growth and marketing. Users 2K → 100K, organic search 2 → 5,300, D30 retention 1.3% → 4.1%, and ₹1.35 Cr saved on content.</p></article>
+      <article class="xcard tint tone-blue"><div class="xtop"><span class="d"><svg class="ic"><use href="#i-cal"/></svg>May 2023 – Nov 2023</span><span class="co">Mother Dairy</span></div><h3>Management Trainee, Supply Chain</h3><p>Built a SKU-level demand forecasting model for an FMCG portfolio and ran compliance audits across warehouses and plants.</p></article>
+      <article class="xcard tint tone-blue"><div class="xtop"><span class="d"><svg class="ic"><use href="#i-cal"/></svg>Feb 2023 – Mar 2023</span><span class="co">Skilled Sapiens</span></div><h3>Growth and Strategy Consultant</h3><p>Brand positioning and go-to-market plan for a K12 edtech, from research with 500+ users and 20 interviews.</p></article>
+      <article class="xcard tint tone-blue"><div class="xtop"><span class="d"><svg class="ic"><use href="#i-cal"/></svg>Jun 2022 – Aug 2022</span><span class="co">Banas Dairy (Amul)</span></div><h3>Summer Intern</h3><p>Pricing strategy from 400+ surveys and 3,500+ data points. Management adopted all 3 recommendations.</p></article>
+      <article class="xcard tint tone-blue"><div class="xtop"><span class="d"><svg class="ic"><use href="#i-cal"/></svg>Oct 2021 – Dec 2021</span><span class="co">Tata Trusts</span></div><h3>Research Intern</h3><p>130+ household surveys and 8 focus groups, 8 KPIs defined, and 5 qualified leads from village-level promotion.</p></article>
+    </div>
+    <div class="edu">
+      <div class="tint2 tone-purple"><b>PGDM (Rural Management)</b>Institute of Rural Management Anand, 2021 to 2023</div>
+      <div class="tint2 tone-purple"><b>B.Tech, Agricultural Engineering</b>College of Agricultural Engineering Jabalpur (JNKVV), 2017 to 2021</div>
+    </div>
+  </section>
+
+  <!-- Ledger -->
+  <section class="wrap plain" id="proof" aria-labelledby="proof-h">
+    <div class="sh"><h2 id="proof-h">Before and After</h2></div>
+    <p class="lede">Filter by lever. Grey is where I started, colour is where it ended. Bars on each row share one scale.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filter by lever"></div>
+    <div class="ledger" id="ledgerList"></div>
+    <p class="src">Source: my LinkedIn experience section, November 2026. Figures are self-reported from my own programmes at Unstop.</p>
+  </section>
+
+  <!-- Calculator -->
+  <section class="wrap tint tone-purple" aria-labelledby="calc-h">
+    <div class="sh"><h2 id="calc-h">What a Repeat-Rate Lift Is Worth</h2></div>
+    <p class="lede">A quick model I use to size retention work before building it. The starting values are placeholders. Change them to match a brand.</p>
+    <div class="fields">
+      <div class="field"><label for="cust">Active customers each month <output id="custOut"></output></label><input id="cust" type="range" min="1000" max="100000" step="1000" value="10000"></div>
+      <div class="field"><label for="rate">Current repeat purchase rate <output id="rateOut"></output></label><input id="rate" type="range" min="5" max="60" step="1" value="20"></div>
+      <div class="field"><label for="aov">Average order value <output id="aovOut"></output></label><input id="aov" type="range" min="200" max="3000" step="50" value="900"></div>
+      <div class="field"><label for="lift">Lift from lifecycle programme <output id="liftOut"></output></label><input id="lift" type="range" min="1" max="15" step="1" value="5"></div>
+    </div>
+    <div role="img" aria-label="Monthly repeat revenue before and after the lift">
+      <div class="cbar"><span>Repeat revenue now</span><div class="t"><i id="b1"></i></div><span class="v" id="v1"></span></div>
+      <div class="cbar up"><span>With the lift</span><div class="t"><i id="b2"></i></div><span class="v" id="v2"></span></div>
+    </div>
+    <p class="result">Extra revenue each month:<strong id="delta"></strong></p>
+    <p class="src">Repeat revenue = active customers × repeat purchase rate × average order value. It ignores margin and campaign cost.</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="wrap tint tone-pink cta" id="contact" aria-labelledby="cta-h">
+    <div>
+      <small>Open to D2C growth and retention roles</small>
+      <h2 id="cta-h">Let's 👋<br>Work Together</h2>
+      <p>Remote or on site. Message me and I can share a short audit of your email, push or SEO.</p>
+    </div>
+    <a class="pbtn" href="https://www.linkedin.com/in/shubham-mishra-540/">Contact with me <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </section>
+
+  <!-- What people say -->
+  <section class="wrap tint tone-blue" aria-labelledby="say-h" id="say">
+    <div class="sh"><h2 id="say-h">What People Say about me</h2></div>
+    <p class="lede say-lede">Comments from the people I worked with at Unstop, taken from my LinkedIn posts. Each tile links to the original comment.</p>
+    <div class="tgrid">
+      <article class="tcard feat tint2 tone-blue"><span class="q"><svg class="ic"><use href="#i-quote"/></svg></span><blockquote>This is the kind of graphs that make everyone go WoW!</blockquote><div class="who"><span class="av" aria-hidden="true">AA</span><div><b>Ankit Aggarwal</b><span>Founder and CEO, Unstop</span></div></div><div class="onpost"><svg class="spark" viewBox="0 0 60 28" aria-hidden="true"><polyline points="2,26 14,24 26,21 38,14 50,8 58,3" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Comment on my post<em>Growth that makes you pause and smile</em></span></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7334921556264931329?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7334921556264931329%2C7334947652897329155%29" target="_blank" rel="noopener" aria-label="See Ankit Aggarwal’s comment on LinkedIn">See the comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="tcard tint2 tone-pink"><span class="q"><svg class="ic"><use href="#i-quote"/></svg></span><blockquote>Keep going. You have been at it, with all your heart.</blockquote><div class="who"><span class="av" aria-hidden="true">AC</span><div><b>Alekhya Chakrabarty</b><span>Marketer and author, Unstop leadership</span></div></div><div class="onpost"><span>Comment on my post<em>What a journey Unstop Practice has been</em></span></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7301298452460670976?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7301298452460670976%2C7301468118164418560%29" target="_blank" rel="noopener" aria-label="See Alekhya Chakrabarty’s comment on LinkedIn">See the comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="tcard tint2 tone-purple"><span class="q"><svg class="ic"><use href="#i-quote"/></svg></span><blockquote>Impressive ✨ Only upwards and upwards. 🔥</blockquote><div class="who"><span class="av" aria-hidden="true">HS</span><div><b>Himanshu Sadhwani</b><span>Director, Client Engagements, Unstop</span></div></div><div class="onpost"><svg class="spark" viewBox="0 0 60 28" aria-hidden="true"><polyline points="2,26 14,24 26,21 38,14 50,8 58,3" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Comment on my post<em>Growth that makes you pause and smile</em></span></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7334921556264931329?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7334921556264931329%2C7334968843930349569%29" target="_blank" rel="noopener" aria-label="See Himanshu Sadhwani’s comment on LinkedIn">See the comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="tcard tint2 tone-green"><span class="q"><svg class="ic"><use href="#i-quote"/></svg></span><blockquote>This is the curve that we need :). Straight line upwards.</blockquote><div class="who"><span class="av" aria-hidden="true">AA</span><div><b>Ankit Aggarwal</b><span>Founder and CEO, Unstop</span></div></div><div class="onpost"><span>Comment on my post<em>What a journey Unstop Practice has been</em></span></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7301298452460670976?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7301298452460670976%2C7301984479055638528%29" target="_blank" rel="noopener" aria-label="See Ankit Aggarwal’s comment on LinkedIn">See the comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="tcard tint2 tone-blue"><span class="q"><svg class="ic"><use href="#i-quote"/></svg></span><blockquote>Well done Shubham. With or without H2O at home, you have got us this far. 😍</blockquote><div class="who"><span class="av" aria-hidden="true">AC</span><div><b>Alekhya Chakrabarty</b><span>Marketer and author, Unstop leadership</span></div></div><div class="onpost"><svg class="spark" viewBox="0 0 60 28" aria-hidden="true"><polyline points="2,26 14,24 26,21 38,14 50,8 58,3" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Comment on my post<em>Growth that makes you pause and smile</em></span></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7334921556264931329?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7334921556264931329%2C7334938384882114560%29" target="_blank" rel="noopener" aria-label="See Alekhya Chakrabarty’s comment on LinkedIn">See the comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="tcard tint2 tone-pink"><span class="q"><svg class="ic"><use href="#i-quote"/></svg></span><blockquote>The team always inspires us to be #Unstoppable and yes your sleepless nights.</blockquote><div class="who"><span class="av" aria-hidden="true">HB</span><div><b>Harshavardhan Bajoria</b><span>Product Manager, AI and Innovation, Unstop</span></div></div><div class="onpost"><span>Comment on my post<em>What a journey Unstop Practice has been</em></span></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7301298452460670976?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7301298452460670976%2C7301469756618940416%29" target="_blank" rel="noopener" aria-label="See Harshavardhan Bajoria’s comment on LinkedIn">See the comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="tcard tint2 tone-purple"><span class="q"><svg class="ic"><use href="#i-quote"/></svg></span><blockquote>Amazing work, Shubham! 🚀</blockquote><div class="who"><span class="av" aria-hidden="true">AG</span><div><b>Ansh Grover</b><span>Growth and Strategy, Blinkit. Ex-Unstop</span></div></div><div class="onpost"><svg class="spark" viewBox="0 0 60 28" aria-hidden="true"><polyline points="2,26 14,24 26,21 38,14 50,8 58,3" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Comment on my post<em>Growth that makes you pause and smile</em></span></div><a class="tcta" href="https://www.linkedin.com/feed/update/urn:li:activity:7334921556264931329?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7334921556264931329%2C7334964400996405248%29" target="_blank" rel="noopener" aria-label="See Ansh Grover’s comment on LinkedIn">See the comment on LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+    </div>
+    <h3 class="rec-h">Recognition</h3>
+    <div class="tscroll" tabindex="0" role="region" aria-label="Recognition, scroll sideways">
+      <article class="tcard rcard tint tone-pink"><span class="q"><svg class="ic"><use href="#i-trophy"/></svg></span><p>Named a Top 10 College Champion at the Forbes India Unstop Awards 2023.</p><div class="who"><span class="av">FU</span><div><b>Forbes India Unstop Awards</b><span>2023</span></div></div></article>
+      <article class="tcard rcard tint tone-green"><span class="q"><svg class="ic"><use href="#i-trophy"/></svg></span><p>Podium finishes in 5 corporate case study challenges and 18 B-school competitions.</p><div class="who"><span class="av">IR</span><div><b>IRMA</b><span>2021 to 2023</span></div></div></article>
+      <article class="tcard rcard tint2 tone-purple"><span class="q"><svg class="ic"><use href="#i-user"/></svg></span><p>Connected 1,600+ graduates on one platform and re-engaged 51 batches through 17 webinars.</p><div class="who"><span class="av">JN</span><div><b>Alumni Head</b><span>JNKVV, 2017 to 2021</span></div></div></article>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<footer class="foot3" aria-label="Footer">
+  <div class="fbox tint tone-purple"><h3>Quick links</h3><div class="flinks"><a href="#home">Home</a><a href="#work">Work</a><a href="#brands">For brands</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div>
+  <div class="fbox tint tone-blue"><h3>Contact</h3><div class="finfo"><div><svg class="ic"><use href="#i-mail"/></svg>Shubhamm540@gmail.com</div><a href="https://www.linkedin.com/in/shubham-mishra-540/"><svg class="ic"><use href="#i-in"/></svg>LinkedIn</a><div><svg class="ic"><use href="#i-pin"/></svg>New Delhi, India</div></div></div>
+  <div class="fbox tint tone-green"><h3>Let's connect</h3><p>Hiring for growth, lifecycle or retention? Send me a note on LinkedIn or watch my video.</p><div class="flinks"><a href="https://www.linkedin.com/in/shubham-mishra-540/">Message on LinkedIn</a><a href="https://youtu.be/Dq6e4cAkYAA">Watch the video</a></div></div>
+</footer>
+<p class="copy">© 2026 Shubham Mishra</p>
+
+<script>
+(function(){
+  function $(id){return document.getElementById(id);}
+
+  /* keep the sticky profile card fully visible on short screens */
+  var box=$('aboutBox');
+  function fitSticky(){
+    if(window.innerWidth<=991){box.style.top='';return;}
+    var h=box.offsetHeight;
+    var top=Math.min(128,window.innerHeight-h-12);
+    box.style.top=top+'px';
+  }
+  window.addEventListener('resize',fitSticky);
+  window.addEventListener('load',fitSticky);
+  fitSticky();
+
+  function pct(v,max){return v<=0?0:Math.max(v/max*100,1.5);}
+  function pairHTML(m){
+    var max=Math.max(m.b,m.a);
+    return '<div class="pair"><div class="nm"><span>'+m.name+'</span><b>'+m.fb+' → '+m.fa+'</b></div>'+
+      '<div class="bar"><span>Before</span><div class="t"><i style="width:'+pct(m.b,max)+'%"></i></div></div>'+
+      '<div class="bar a"><span>After</span><div class="t"><i style="width:'+pct(m.a,max)+'%"></i></div></div></div>';
+  }
+
+  /* ---------- work ---------- */
+  var work=[
+    {tone:'purple',tag:'Growth · Product-led',title:'From 2K to 100K monthly users',text:'Sole owner of growth and marketing for Unstop Practice. I built the lifecycle from onboarding to retention across app, email and push.',pairs:[{name:'Monthly active users',b:2000,a:100000,fb:'2K',fa:'100K'}],foot:'12 months · Dec 2023 to Jun 2025'},
+    {tone:'blue',tag:'Email and push · Retention',title:'Rebuilt the journeys where users drop off',text:'I A/B tested creatives, segments and lifecycle journeys, then redesigned the drop-off points in the funnel.',pairs:[{name:'Click-through rate',b:1.2,a:3.9,fb:'1.2%',fa:'3.9%'},{name:'Click-to-open rate',b:8,a:27,fb:'8%',fa:'27%'},{name:'D30 retention',b:1.3,a:4.1,fb:'1.3%',fa:'4.1%'}],foot:'Unstop Practice'},
+    {tone:'green',tag:'SEO · Organic',title:'Organic search from 2 to 5,300 a month',text:'I paired content with a community loop, so users posted about Practice on their own and search followed.',pairs:[{name:'Organic search a month',b:2,a:5300,fb:'2',fa:'5,300'},{name:'Organic UGC posts a month',b:0,a:300,fb:'0',fa:'300+'}],foot:'Unstop Practice'},
+    {tone:'pink',tag:'Gamification · Community',title:'Leaderboards that turn users into advocates',text:'Branded IPs with a leaderboard-linked reward loop. In 2026 I carried the mechanics into campus communities, with a live leaderboard scoring 41 weighted parameters.',pairs:[{name:'Active campus ambassadors',b:34,a:118,fb:'34',fa:'118'},{name:'Campus clubs',b:19,a:64,fb:'19',fa:'64'}],foot:'Unstop community · 2026'},
+    {tone:'blue',tag:'Segmentation · Go-to-market',title:'Found the segment that converts 3x',text:'Cohort and attribution models in Google Analytics and MoEngage showed that competition-section users converted at 3x. A segmented go-to-market built on that drove 47% of MAU growth.',bigs:[{n:'3x',l:'conversion rate'},{n:'47%',l:'of MAU growth'}],foot:'Unstop Practice'},
+    {tone:'purple',tag:'Product creation',title:'17 products in 12 months, then a freemium model',text:'I mapped student lifecycles with demand and trend signals and launched 17 consumer-insight-led products. A token system moved Practice to freemium, lifting paid adoption.',bigs:[{n:'17',l:'products launched'},{n:'+7%',l:'sessions per user'},{n:'3',l:'B2G deals'}],foot:'Unstop Practice'},
+    {tone:'pink',tag:'Campaign',title:'A 7-day hackathon growth campaign',text:'An integrated campaign built around a large-scale hackathon, planned and run across channels in one week.',bigs:[{n:'10X',l:'engagement'},{n:'3.75L',l:'candidates attracted'}],foot:'Unstop Practice'},
+    {tone:'green',tag:'Operations',title:'Content operations overhaul',text:'I moved content creation in-house and built a quality framework, so email, push and SEO programmes had a fast, low-cost supply.',bigs:[{n:'₹1.35 Cr',l:'saved a year'},{n:'~80%',l:'less rework'},{n:'15 → 2',l:'days turnaround'}],foot:'Unstop'}
+  ];
+  function workSlide(s){
+    var vis='';
+    if(s.pairs){vis='<div class="pairs">'+s.pairs.map(pairHTML).join('')+'</div>';}
+    if(s.bigs){vis='<div class="bigs">'+s.bigs.map(function(b){return '<div class="big"><strong>'+b.n+'</strong><span>'+b.l+'</span></div>';}).join('')+'</div>';}
+    return '<article class="wslide tone-'+s.tone+'"><div class="visual tint">'+vis+'</div><div class="winfo"><span class="tag">'+s.tag+'</span><h3>'+s.title+'</h3><p>'+s.text+'</p><span class="foot">'+s.foot+'</span></div></article>';
+  }
+
+  /* ---------- brands ---------- */
+  var brands=[
+    {tone:'green',cat:'Subscription dairy · Retention',name:'Country Delight',ind:'FMCG',fact:'A MoEngage case study reports 2.5X daily active users from event-based engagement during the 2020 lockdown.',url:'https://www.moengage.com/casestudy/country-delight-engagement-case-study',
+     plays:[['Lifecycle','A "pause, do not cancel" journey. When someone skips or pauses deliveries, offer a swap or a pause through push and email before they leave.'],['Gamification','A freshness streak. Consecutive delivered days earn wallet credit, and I test whether streaks keep subscribers longer.'],['Basket depth','Move one-product subscribers to three with a milk, curd, paneer ladder based on order history.']],
+     metric:'Products per subscriber · 90-day retention',proof:'D30 retention 1.3% → 4.1%',why:'Dairy background at Mother Dairy and Amul.'},
+    {tone:'purple',cat:'Coffee · Repeat purchase',name:'Sleepy Owl',ind:'FMCG',fact:'Launched a monthly subscription for cold brew, hot brew and ready-to-drink in 2021. Its co-founder describes coffee as a daily routine.',url:'https://www.foodnavigator.com/Article/2021/10/14/Going-to-ground-India-s-Sleepy-Owl-Coffee-unveils-latest-innovations-to-convert-tea-obsessed-nation-to-coffee/',
+     plays:[['Lifecycle','Reorder reminders timed to pack size and brew method, sent by email and push before the customer runs out.'],['Cross-sell','A coffee-journey series that moves a cold brew buyer to hot brew or ground coffee on the second order.'],['Gamification','A morning-ritual challenge led by the owl mascot. Top posts climb a leaderboard and win products.']],
+     metric:'Days between orders · Subscription attach rate',proof:'UGC 0 → 300+ posts a month',why:'Same challenge-and-leaderboard loop I ran at Unstop.'},
+    {tone:'blue',cat:'Clean-label food · Content-led',name:'The Whole Truth',ind:'FMCG',fact:'Positions itself as a 100% clean-label brand and writes out every ingredient it uses (Entrepreneur India, 2022).',url:'https://india.entrepreneur.com/entrepreneurs/clean-food-savant/427517',
+     plays:[['SEO','Topic clusters on reading labels and what is inside common snacks, each linked to a product page.'],['Lifecycle','After the first order, an email series explaining ingredients and suggesting a second product.'],['Gamification','A label-detective challenge. Customers check labels, share what they find, and earn sampling packs.']],
+     metric:'Non-brand organic sessions · Second-product rate',proof:'Organic search 2 → 5,300 a month',why:'Content and community loops drove the Practice search growth.'},
+    {tone:'blue',cat:'Haircare · Repeat purchase',name:'Moxie Beauty',ind:'Beauty & Personal Care',fact:'Reports ₹100 Cr+ annual run-rate within two years of launch and overall retention above 40%, selling on its own site, Nykaa, Amazon and quick commerce (BeautyMatter, Dec 2025).',url:'https://beautymatter.com/articles/haircare-brand-moxie-beauty-raises-15-million',
+     plays:[['Lifecycle','A pack QR leads to a hair-type quiz that enrols marketplace and quick-commerce buyers in WhatsApp and email. A routine journey follows: curl cream, then leave-in, then mask.'],['Reorder','Reminders timed to pack size that point to the fastest place to buy: its own site, Nykaa or quick commerce.'],['Community','Reviews tagged by hair type, plus a wash-day challenge with a leaderboard that feeds product pages and ads.']],
+     metric:'90-day repeat rate by channel · Second-product rate',proof:'D30 retention 1.3% → 4.1%',why:'First step: define what “40% retention” means, by channel and first product.'},
+    {tone:'pink',cat:'Beauty and personal care · Routine',name:'Mamaearth',ind:'Beauty & Personal Care',fact:'A MoEngage case study reports a 26% rise in repeat customers from segmentation and post-purchase journeys.',url:'https://www.moengage.com/casestudy/mamaearth-increases-delivery-rates-by-200x/',
+     plays:[['Lifecycle','Routine journeys. After a first order, guide a three-step routine and nudge the next product when it is due.'],['Community','A creator leaderboard that turns top customers into micro-creators, like the Practice leaderboard cards.'],['Push','Audit delivery rate and CTR by segment, then A/B test timing and creative.']],
+     metric:'90-day repeat rate · UGC volume',proof:'CTR 1.2% → 3.9%',why:'Segment-level A/B testing in MoEngage at Unstop.'},
+    {tone:'green',cat:'Sleep and home · SEO',name:'Wakefit',ind:'E-commerce & D2C',fact:'Its SEO and content programme won Best Content Marketing Strategy at Content Marketing Summit Asia 2022, per agency Social Beat.',url:'https://www.socialbeat.in/blog/how-we-increased-organic-taffic-and-revenue-d2c-case-study/',
+     plays:[['SEO','A sleep and home hub, linked to comparison and buying-guide pages such as memory foam versus spring.'],['Lifecycle','A post-purchase journey that suggests the next item, such as a pillow or bedsheet, at the right week after delivery.'],['Reviews','Ask for long-form reviews with a short sleep check-in, and feature them on category pages.']],
+     metric:'Non-brand organic revenue · Second-category rate',proof:'47% of MAU growth from one segment',why:'Cohort and attribution models to find what converts.'},
+    {tone:'purple',cat:'Audio and wearables · Community',name:'boAt',ind:'E-commerce & D2C',fact:'Calls its customers boAtheads and runs relationship officers who talk with the community, per co-founder Aman Gupta (afaqs).',url:'https://www.afaqs.com/news/mktg/brands-focus-this-year-will-be-on-growing-wearables-category-boats-aman-gupta',
+     plays:[['Community','A campus ambassador programme with task-based leaderboards, using the mechanics behind my 34 → 118 ambassadors.'],['Lifecycle','Owner journeys after purchase: registration, warranty and accessory nudges across app, email and push.'],['Launches','A waitlist and teaser sequence for each launch, built on my 17-product launch routine.']],
+     metric:'Accessory attach rate · Active ambassadors',proof:'Ambassadors 34 → 118',why:'I built and scaled this exact programme in 2026.'},
+    {"tone": "pink", "ind": "E-commerce & D2C", "cat": "Beauty e-commerce · Repeat purchase", "name": "Nykaa", "fact": "Said about 79% of its beauty GMV in Q2 FY24 came from customers who already existed on the platform when the year began (earnings call).", "url": "https://nsearchives.nseindia.com/corporate/NYKAA_10112023130753_TranscriptEarningsCallQ2FY24.pdf", "plays": [["Lifecycle", "Replenishment reminders by product type. Skincare, haircare and makeup run out at different times, so each reminder is timed to the pack and uses the shopper’s own shade, skin or hair profile."], ["Cross-sell", "Show Nykaa Fashion picks to beauty repeaters who have never bought fashion, then compare the cost of those customers with paid acquisition."], ["Loyalty", "Show each Prive member how far they are from the next tier, with one reason to come back this month."]], "metric": "Repeat rate by category · Beauty-to-fashion crossover", "proof": "D30 retention 1.3% → 4.1%", "why": "Same job I do now: bring people back after a first purchase."},
+    {"tone": "purple", "ind": "E-commerce & D2C", "cat": "Fashion e-commerce · Loyalty", "name": "Myntra", "fact": "Its Insider loyalty programme had about 6.8 million members in 2020, who contributed over 40% of sales (Business Insider India).", "url": "https://www.businessinsider.in/advertising/brands/article/myntra-is-betting-big-on-video-content-and-its-loyalty-program-for-its-next-phase-of-growth/articleshow/73770671.cms", "plays": [["Loyalty", "Show every shopper how close they are to the next Insider tier, and send a pre-sale nudge to those within reach."], ["Lifecycle", "Wishlist triggers: price-drop and back-in-size alerts for saved items, since Insider rewards browsing and wishlisting as well as buying (YourStory, 2018)."], ["Content", "Turn stylist sessions and creator looks into shoppable looks, then compare repeat visits of people who watched with those who did not."]], "metric": "Insider share of orders · Visit frequency", "proof": "CTR 1.2% → 3.9%", "why": "Segment-level A/B testing in MoEngage at Unstop."},
+    {"tone": "green", "ind": "Ed-Tech", "cat": "Test prep · Free to paid", "name": "PhysicsWallah", "fact": "Reports 5.34 million paid users in FY26, up 20% year on year (Outlook Business).", "url": "https://www.outlookbusiness.com/corporate/physicswallah-slashes-fy26-losses-as-revenue-jumps-51-bets-big-on-ai-and-offline-expansion", "plays": [["Lifecycle", "Segment free viewers by exam and class. After a set number of free lessons, show the paid batch that matches what they have been watching."], ["Renewal", "Mid-batch and end-of-batch messages tied to results, such as test progress and doubts solved, with the next batch recommended before the old one ends."], ["Community", "City and exam study groups with weekly leaderboards, built on the mechanics behind my 34 → 118 ambassadors."]], "metric": "Free-to-paid conversion · Batch renewal rate", "proof": "Ambassadors 34 → 118", "why": "I built community and lifecycle loops for students at Unstop."},
+    {"tone": "blue", "ind": "Ed-Tech", "cat": "Upskilling · Enrolment", "name": "upGrad", "fact": "Reports a 19% rise in consumer learner enrolments in FY25, on gross revenue of ₹1,943 Cr (Entrackr).", "url": "https://entrackr.com/fintrackr/upgrad-turns-ebitda-positive-in-fy25-reports-rs-1943-cr-gross-revenue-10605459", "plays": [["Lifecycle", "Re-engage people who attended a counselling call but did not enrol, with a journey built around the goal they named, such as a career switch or a promotion."], ["Cross-sell", "After a course, suggest the next step: a second programme, or internships and jobs. upGrad has said it is closing acquisitions of Internshala and Unacademy (press release, Aug 2026)."], ["Referrals", "An alumni referral programme with a simple leaderboard, so finished learners bring in the next batch."]], "metric": "Counselling-to-enrolment rate · Second-programme rate", "proof": "D30 retention 1.3% → 4.1%", "why": "I rebuilt drop-off journeys across app, email and push."},
+    {"tone": "purple", "ind": "HR-Tech", "cat": "Internships and fresher jobs · Activation", "name": "Internshala", "fact": "Reports 34 million+ registered users, about 450,000 employers and roughly 3 million active applicants a year (CB Insights).", "url": "https://www.cbinsights.com/investor/internshala", "plays": [["Lifecycle", "Registered users far outnumber yearly applicants, so build a journey for the dormant base by college year and interest: finish your profile, then apply to three internships this week."], ["Employers", "Nudge employers who posted a role but have not shortlisted anyone, and show them how quickly similar roles filled."], ["Community", "Campus ambassadors with task-based leaderboards, the way I run them at Unstop."]], "metric": "Registered-to-active rate · Applications per active student", "proof": "Ambassadors 34 → 118", "why": "I run the campus ambassador programme at Unstop."},
+    {"tone": "blue", "ind": "HR-Tech", "cat": "Jobs for frontline workers · Habit", "name": "apna", "fact": "Claims nearly 60 million users and more than 7 lakh employers (Inc42, FY24 coverage).", "url": "https://inc42.com/?p=501998", "plays": [["Lifecycle", "Job alerts and interview reminders in the user’s own language, sent on WhatsApp and push. Users prefer a mix of English and regional languages (YourStory, 2022)."], ["Community", "Turn interview-practice groups into a weekly habit with streaks and a leaderboard."], ["Employers", "Re-engage small employers who posted once, with a summary of candidates reached and a one-tap repost."]], "metric": "Weekly active job seekers · Employer repost rate", "proof": "D30 retention 1.3% → 4.1%", "why": "I rebuilt drop-off journeys across app, email and push."},
+    {tone:'purple',cat:'Fragrance · Repeat purchase',name:'Bla Bli Blu',ind:'Beauty & Personal Care',fact:'Reports a ₹250 Cr annual run-rate and EBITDA-positive within about a year of its July 2025 launch (PTI, Oct 2026). An earlier D2C Insider report put about 70% of sales on marketplaces.',url:'https://hdfcsky.com/news/bla-bli-blu-achieves-rs-250-crore-annual-run-rate-becomes-ebitda-positive',
+     plays:[['Lifecycle','A pack QR leads to a "find your scent" quiz that enrols marketplace and quick-commerce buyers in WhatsApp and email. A journey follows: 30 ml gift set, then full size, then the next scent.'],['Reorder','Reminders timed to bottle size and the scent family the customer picked, sent by WhatsApp and push before the bottle runs out.'],['Community','A scent-of-the-week review loop. Customers rate and describe scents, and the top reviews feed product pages and the next gift set.']],
+     metric:'Repeat rate by channel · Gift set to full size conversion',proof:'D30 retention 1.3% → 4.1%',why:'I build journeys that bring one-time buyers back, which a marketplace-heavy brand needs.'},
+    {tone:'pink',cat:'Skincare · Routine',name:'Suroskie',ind:'Beauty & Personal Care',fact:'Calls itself a brand built on community and claims 200Mn+ brand presence. Founder Deepali Bansal started it; co-founder Puneet Bansal leads marketing (Suroskie about page).',url:'https://suroskie.com/pages/about-us',
+     plays:[['Lifecycle','A skin-concern quiz after the first order, then a routine journey: serum, then moisturiser, then sun care, timed to when the first product runs low.'],['Payments','Many orders ship cash on delivery. A WhatsApp confirmation with a small reward for switching to prepaid, tested against a control group.'],['Community','Customers share a four-week skin diary. The best diaries earn a product and appear on the product page.']],
+     metric:'Second-product rate · Prepaid share of COD orders',proof:'CTR 1.2% → 3.9%',why:'A/B testing creatives and segments is the habit I would bring.'},
+    {tone:'blue',cat:'Clinical skincare · Content-led',name:'BeCalm',ind:'Beauty & Personal Care',fact:'Presents itself as calming and clinical skincare, dermatologist tested for oily and sensitive skin (Instagram bio).',url:'https://www.instagram.com/lets_becalm/',
+     plays:[['SEO','Pages for the questions oily and sensitive skin buyers search for, such as barrier repair and what to avoid, each linked to the matching product.'],['Lifecycle','A check-in journey at weeks two, four and eight. Skincare results take time, so each message answers what to expect and when to adjust.'],['Reviews','Ask for reviews with skin type and routine length, and feature them on product pages so a sensitive-skin buyer sees someone like them.']],
+     metric:'Non-brand organic sessions · Routine completion (two or more products)',proof:'Organic search 2 → 5,300 a month',why:'Content and lifecycle loops drove the Practice growth.'},
+    {tone:'green',cat:'Home care · Cross-sell',name:'Scrubsy',ind:'FMCG',fact:'Describes itself as a performance-led home-care brand, with foam cleaners for kitchens, bathrooms and footwear (F4 Fund profile).',url:'https://f4.fund/startups/scrubsy',
+     plays:[['Lifecycle','A surface ladder. A kitchen cleaner buyer gets a bathroom then footwear suggestion about two weeks after delivery, based on what they bought.'],['SEO','How-to pages for specific jobs, such as cleaning white sneakers or a greasy hob, each ending in the right foam cleaner.'],['Community','Before-and-after clips from customers. The best ones go on product pages and into a monthly leaderboard with product rewards.']],
+     metric:'Surfaces per customer · Refill rate',proof:'UGC 0 → 300+ posts a month',why:'The leaderboard loop is the one I ran at Unstop.'}
+  ];
+  function brandSlide(b){
+    var plays=b.plays.map(function(p){return '<li><em>'+p[0]+'</em><span>'+p[1]+'</span></li>';}).join('');
+    return '<article class="bslide tint2 tone-'+b.tone+'">'+
+      '<span class="tag">'+b.cat+'</span>'+
+      '<h3>'+b.name+'</h3>'+
+      '<p class="fact"><b>Public fact:</b> '+b.fact+' <a href="'+b.url+'">Source</a></p>'+
+      '<ul class="plays">'+plays+'</ul>'+
+      '<div class="pills"><span>Metric: '+b.metric+'</span></div>'+
+      '<div class="pills"><span class="p">My proof: '+b.proof+'</span></div>'+
+      '<a class="open" href="'+b.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'/" aria-label="Open the full plan for '+b.name+'">Open the full plan <span aria-hidden="true">→</span></a>'+
+      '<span class="foot">'+b.why+'</span></article>';
+  }
+
+  /* ---------- carousel ---------- */
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function carousel(vpId,trackId,dotsId,items,render,progId){
+    var track=$(trackId),vp=$(vpId),dots=$(dotsId);
+    track.innerHTML=items.map(render).join('');
+    var slides=track.children;
+    var ctrl=document.querySelector('.ctrl[data-for="'+vpId+'"]');
+    var count=ctrl.querySelector('.count');
+    var prev=ctrl.querySelector('[data-dir="-1"]'),next=ctrl.querySelector('[data-dir="1"]');
+    function build(){
+      dots.innerHTML='';
+      items.forEach(function(_,i){
+        var d=document.createElement('button');
+        d.type='button';d.setAttribute('aria-label','Go to slide '+(i+1));
+        d.addEventListener('click',function(){go(i);});
+        dots.appendChild(d);
+      });
+    }
+    build();
+    function step(){return slides.length<2?slides[0].offsetWidth:slides[1].offsetLeft-slides[0].offsetLeft;}
+    function index(){return Math.max(0,Math.min(slides.length-1,Math.round(vp.scrollLeft/step())));}
+    function go(i){vp.scrollTo({left:i*step(),behavior:reduce?'auto':'smooth'});}
+    function update(){
+      var i=index();
+      count.textContent=(i+1)+' / '+slides.length;
+      Array.prototype.forEach.call(dots.children,function(d,k){d.setAttribute('aria-current',k===i?'true':'false');});
+      prev.disabled=(i===0);
+      next.disabled=(vp.scrollLeft+vp.clientWidth>=vp.scrollWidth-4);
+      if(progId){$(progId).style.width=((i+1)/slides.length*100)+'%';}
+    }
+    prev.addEventListener('click',function(){go(index()-1);});
+    next.addEventListener('click',function(){go(index()+1);});
+    vp.addEventListener('scroll',function(){window.requestAnimationFrame(update);});
+    vp.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'){e.preventDefault();go(index()+1);}
+      if(e.key==='ArrowLeft'){e.preventDefault();go(index()-1);}
+    });
+    window.addEventListener('resize',update);
+    update();
+    return {setItems:function(n){items=n;track.innerHTML=items.map(render).join('');build();vp.scrollLeft=0;update();}};
+  }
+  carousel('c1','s1','d1',work,workSlide,'p1');
+  var inds=['Beauty & Personal Care','FMCG','HR-Tech','Ed-Tech','E-commerce & D2C'];
+  function inInd(i){return brands.filter(function(b){return b.ind===inds[i];});}
+  var brandCar=carousel('c2','s2','d2',inInd(0),brandSlide,null);
+  (function(){
+    var box=$('bt-tabs');
+    box.innerHTML=inds.map(function(n,i){
+      return '<button class="bt-tab" role="tab" type="button" id="bt-'+i+'" aria-selected="'+(i===0)+'" aria-controls="c2" data-i="'+i+'"'+(i===0?'':' tabindex="-1"')+'>'+n.replace('&','&amp;')+' <span class="n">'+inInd(i).length+'</span></button>';
+    }).join('');
+    var btns=[].slice.call(box.querySelectorAll('.bt-tab'));
+    function pick(i,focus){
+      btns.forEach(function(b,k){b.setAttribute('aria-selected',k===i?'true':'false');b.tabIndex=(k===i)?0:-1;});
+      brandCar.setItems(inInd(i));
+      $('c2').setAttribute('aria-label','Plans for '+inds[i]+' brands, swipe or use arrows');
+      if(focus){btns[i].focus();}
+    }
+    btns.forEach(function(b,i){b.addEventListener('click',function(){pick(i,false);});});
+    box.addEventListener('keydown',function(e){
+      var cur=btns.findIndex(function(b){return b.getAttribute('aria-selected')==='true';});
+      var n=cur;
+      if(e.key==='ArrowRight'){n=(cur+1)%btns.length;}
+      else if(e.key==='ArrowLeft'){n=(cur-1+btns.length)%btns.length;}
+      else if(e.key==='Home'){n=0;}
+      else if(e.key==='End'){n=btns.length-1;}
+      else{return;}
+      e.preventDefault();pick(n,true);
+    });
+  })();
+  fitSticky();
+
+  /* ---------- ledger ---------- */
+  var rows=[
+    {lever:'Growth',tone:'purple',name:'Monthly active users',ctx:'Unstop Practice, 12 months',b:2000,a:100000,fb:'2K',fa:'100K'},
+    {lever:'SEO',tone:'blue',name:'Organic search a month',ctx:'Unstop Practice',b:2,a:5300,fb:'2',fa:'5,300'},
+    {lever:'Community',tone:'green',name:'Organic UGC posts a month',ctx:'Unstop Practice',b:0,a:300,fb:'0',fa:'300+',chip:'0 → 300+'},
+    {lever:'Email and push',tone:'pink',name:'Click-through rate',ctx:'A/B tested creatives and segments',b:1.2,a:3.9,fb:'1.2%',fa:'3.9%'},
+    {lever:'Email and push',tone:'pink',name:'Click-to-open rate',ctx:'A/B tested creatives and segments',b:8,a:27,fb:'8%',fa:'27%'},
+    {lever:'Retention',tone:'blue',name:'D30 retention',ctx:'After rebuilding drop-off journeys',b:1.3,a:4.1,fb:'1.3%',fa:'4.1%'},
+    {lever:'Community',tone:'green',name:'Active campus ambassadors',ctx:'Unstop community, 2026',b:34,a:118,fb:'34',fa:'118'},
+    {lever:'Community',tone:'green',name:'Campus clubs',ctx:'Unstop community, 2026',b:19,a:64,fb:'19',fa:'64'},
+    {lever:'Community',tone:'green',name:'College partnership conversion',ctx:'Unstop community, 2026',b:38,a:51,fb:'38%',fa:'51%'},
+    {lever:'Ops',tone:'purple',name:'Content turnaround, days',ctx:'Content operations overhaul',b:15,a:2,fb:'15',fa:'2',dir:'down'},
+    {lever:'Ops',tone:'purple',name:'Partnership agreement turnaround, days',ctx:'Unstop community, 2026',b:7,a:2,fb:'7',fa:'2',dir:'down'}
+  ];
+  var levers=['All','Growth','SEO','Email and push','Retention','Community','Ops'];
+  function chipText(r){
+    if(r.chip){return r.chip;}
+    var ratio=r.a/r.b;
+    if(r.dir==='down'){return '−'+Math.round((1-ratio)*100)+'%';}
+    if(ratio>=10){return Math.round(ratio).toLocaleString('en-US')+'×';}
+    if(ratio>=2){return ratio.toFixed(1)+'×';}
+    return '+'+Math.round((ratio-1)*100)+'%';
+  }
+  var list=$('ledgerList');
+  rows.forEach(function(r){
+    var max=Math.max(r.a,r.b);
+    var el=document.createElement('div');
+    el.className='lrow tint tone-'+r.tone;
+    el.setAttribute('data-lever',r.lever);
+    el.innerHTML='<div class="lname">'+r.name+'<small>'+r.ctx+'</small></div>'+
+      '<div><div class="bar"><span>Before</span><div class="t"><i style="width:'+pct(r.b,max)+'%"></i></div></div>'+
+      '<div class="bar a"><span>After</span><div class="t"><i style="width:'+pct(r.a,max)+'%"></i></div></div></div>'+
+      '<div class="lchip">'+chipText(r)+'</div>';
+    list.appendChild(el);
+  });
+  var fbox=$('filters');
+  levers.forEach(function(l,i){
+    var b=document.createElement('button');
+    b.type='button';b.textContent=l;b.setAttribute('aria-pressed',i===0?'true':'false');
+    b.addEventListener('click',function(){
+      Array.prototype.forEach.call(fbox.children,function(c){c.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      Array.prototype.forEach.call(list.children,function(row){row.hidden=(l!=='All'&&row.getAttribute('data-lever')!==l);});
+    });
+    fbox.appendChild(b);
+  });
+
+  /* ---------- calculator ---------- */
+  var inr=new Intl.NumberFormat('en-IN',{maximumFractionDigits:0});
+  function rupee(n){
+    if(n>=10000000){return '₹'+(n/10000000).toFixed(2)+' Cr';}
+    if(n>=100000){return '₹'+(n/100000).toFixed(2)+' L';}
+    return '₹'+inr.format(n);
+  }
+  function calc(cust,rate,aov,lift){
+    var base=cust*(rate/100)*aov, up=cust*((rate+lift)/100)*aov;
+    return {base:base,up:up,delta:up-base};
+  }
+  function render(){
+    var cust=+$('cust').value,rate=+$('rate').value,aov=+$('aov').value,lift=+$('lift').value;
+    $('custOut').textContent=inr.format(cust);
+    $('rateOut').textContent=rate+'%';
+    $('aovOut').textContent='₹'+inr.format(aov);
+    $('liftOut').textContent='+'+lift+' pts';
+    var r=calc(cust,rate,aov,lift);
+    $('b1').style.width=(r.base/r.up*100)+'%';
+    $('b2').style.width='100%';
+    $('v1').textContent=rupee(r.base);
+    $('v2').textContent=rupee(r.up);
+    $('delta').textContent=rupee(r.delta);
+  }
+  ['cust','rate','aov','lift'].forEach(function(id){$(id).addEventListener('input',render);});
+  render();
+})();
+
+// ---- case competitions ----
+(function(){
+  var CC = {"corp": [{"badge": "TS", "color": "#0F4C97", "org": "Tata Steel", "event": "Steel-a-thon Season 9", "when": "Sep 2022", "title": "Carbon-neutral shipping pathway", "result": "National Finalist", "chips": ["1 of 5 value-chain finalists", "9,200+ teams", "PPI offer"], "problem": "Tata Steel Logistics & Shipping BV needed a pathway to carbon neutrality. Tata Steel already leads on safety and sustainability, so teams had to design a route to sustainable shipping.", "solution": ["Built a pathway towards sustainable shipping for Tata Steel Logistics & Shipping BV as Team The Paratroops (Shubham Mishra, Apoorva Khare, Yash Mahajan, IRMA).", "Cleared the national rounds to be one of five finalists in the value chain (supply chain) track, out of 9,200+ teams from B-schools across India.", "Presented at the Grand Finale on 24 Sep 2022, which led to a Pre-Placement Interview offer."], "proof": [["tata-cert", "Finalist certificate, Tata Steel", "https://www.linkedin.com/in/shubham-mishra-540/overlay/Honor/553364422/treasury/"], ["tata-post", "IRMA announcement on LinkedIn", "https://www.linkedin.com/feed/update/urn:li:activity:6982962847819415552/"]], "links": [["LinkedIn post by IRMA", "https://www.linkedin.com/feed/update/urn:li:activity:6982962847819415552/"], ["IRMA write-up", "https://irma.ac.in/news/1018"]], "stats": [["1 of 5", "value-chain finalists"], ["9,200+", "teams"], ["PPI", "offer won"]], "img": "tata-cert"}, {"badge": "IC", "color": "#B02A1E", "org": "ICICI Bank", "event": "Beat The Curve 2022", "when": "Sep 2022", "title": "Digital onboarding for MSME lending", "result": "Campus Winner · National Semi-Finalist", "chips": ["1 of 8 semi-finalists", "5,622 teams", "IRMA campus winners"], "problem": "Shift ICICI Bank from physical sourcing of MSME loans to digitally acquiring MSME customers, with an integrated digital and technology solution.", "solution": ["Ran secondary and primary research on MSME lending across the banking industry.", "Proposed a digital intervention strategy for onboarding: more relevant leads and shorter onboarding time.", "Added a feasibility analysis and the expected impact on ICICI Bank’s MSME lending.", "Team: Apoorva Khare, Shubham Mishra, Vikas Kalki M and Yash Mahajan."], "proof": [["icici-winner", "Campus winners poster, ICICI Bank", "https://www.linkedin.com/in/shubham-mishra-540/overlay/Honor/553462580/treasury/"], ["icici-post", "IRMA announcement on LinkedIn", "https://www.linkedin.com/feed/update/urn:li:activity:6992816372120489984/"]], "links": [["LinkedIn post by IRMA", "https://www.linkedin.com/feed/update/urn:li:activity:6992816372120489984/"], ["IRMA write-up", "https://irma.ac.in/news/1032"]], "stats": [["1 of 8", "semi-finalists"], ["5,622", "teams"], ["Campus", "winners"]], "img": "icici-winner"}, {"badge": "VG", "color": "#0B5D3B", "org": "V-Guard", "event": "Big Idea Business Plan 2022", "when": "Oct to Nov 2022", "title": "Digital Frozen Dessert Maker", "result": "National Finalist", "chips": ["21 finalists of ~300 teams", "PPI offer", "Team leader"], "problem": "Pitch a “Next Big Leap” product for V-Guard Industries and back it with a business plan. India has no good, affordable, branded home ice-cream maker: quality machines cost lakhs and the cheap ones are poor.", "solution": ["Product: a 1.5L digital frozen dessert maker with an auto shut-off timer, priced at ₹4,999 with a 5-year warranty.", "Primary research: 2 FGDs, 12 in-depth interviews, 5 phone interviews and 127 survey responses. 85% wanted customised, healthier desserts at home, and 71% of home makers had quit after a few attempts.", "Market: India ice cream at ₹165.2B in 2021, growing 17.69% a year (IMARC). Target: households earning above ₹10 lakh in tier 1 and 2 cities.", "Go-to-market: V-Guard’s distribution plus e-commerce festive sales, with incentives for retailers. Budget planned at ₹7.76 Cr."], "proof": [["vguard-post", "IRMA announcement on LinkedIn", "https://www.linkedin.com/feed/update/urn:li:activity:7003237197235515392/"]], "links": [["LinkedIn post by IRMA", "https://www.linkedin.com/feed/update/urn:li:activity:7003237197235515392/"], ["IRMA write-up", "https://irma.ac.in/news/1044"]], "stats": [["21", "finalists"], ["~300", "teams"], ["₹4,999", "proposed price"]], "img": "vguard-post"}, {"badge": "AV", "color": "#1B3A8A", "org": "Avalon Consulting", "event": "Sun Tzu 2022", "when": "Aug to Sep 2022", "title": "Strategy and growth case: Terra Agri", "result": "National Semi-Finalist", "chips": ["1 of 8 semi-finalists", "1,500+ teams"], "problem": "Sun Tzu is Avalon Consulting’s national B-school case competition. Our team took Case 4, Terra Agri, a strategy and growth consulting problem.", "solution": ["Cleared Round 1 and Round 2 as Team The Paratroops to reach the semi-finals.", "Ended as one of 8 semi-finalist teams out of 1,500+ from B-schools across India."], "proof": [["avalon-post", "IRMA announcement on LinkedIn", "https://www.linkedin.com/feed/update/urn:li:activity:6980436329327153152/"]], "links": [["LinkedIn post by IRMA", "https://www.linkedin.com/feed/update/urn:li:activity:6980436329327153152/"], ["IRMA write-up", "https://irma.ac.in/news/1013"]], "stats": [["1 of 8", "semi-finalists"], ["1,500+", "teams"]], "img": "avalon-post"}, {"badge": "SS", "color": "#6A2BBF", "org": "Skilled Sapiens", "event": "National Level Consulting Case Competition", "when": "Feb and Mar 2023", "title": "K12 growth strategy, won as a live project", "result": "Rank 11 (Feb) · Rank 17 (Mar)", "chips": ["National Finalist twice", "Prize: live project"], "problem": "Identify the scope and an implementation plan for consulting services to K-12 students across India.", "solution": ["Ranked 11th in February and 17th in March among national teams. The award both months was a live strategy consulting project.", "Delivered the live project: primary research with 500+ parents, students and teachers and 20 in-depth interviews.", "Assessed needs, gaps, features and competitors, and built the brand positioning and go-to-market plan for a K12 edtech."], "proof": [], "links": [["Honors on LinkedIn", "https://www.linkedin.com/in/shubham-mishra-540/details/honors/"]], "stats": [["#11", "Feb rank"], ["#17", "Mar rank"], ["500+", "survey responses"]], "img": null}, {"badge": "PL", "color": "#C2410C", "org": "Parley", "event": "Enigmatic, a marketing case competition", "when": "Aug 2022", "title": "National marketing case", "result": "National Finalist", "chips": ["Rank 33 of 2,008 teams"], "problem": "A national marketing case competition run by Parley.", "solution": ["Finished 33rd among 2,008 teams and was named a National Finalist."], "proof": [], "links": [["Honors on LinkedIn", "https://www.linkedin.com/in/shubham-mishra-540/details/honors/"]], "stats": [["#33", "rank"], ["2,008", "teams"]], "img": null}], "bs": [{"badge": "IS", "color": "#0F4C97", "org": "IIT (ISM) Dhanbad", "event": "Petro Jam: Oilympics", "when": "Mar 2023", "title": "Oilympics case study", "result": "National Winner", "chips": ["Consulting"], "problem": "A consulting case study in the energy sector, set by the Petro Jam fest at IIT (ISM) Dhanbad.", "solution": ["Won the competition at national level.", "Winner announced by the host on Instagram."], "proof": [["petrojam-post", "Winner announcement", "https://www.instagram.com/fipi_iitism/p/Cp3aU6kSgB0/"]], "links": [["Winner post", "https://www.instagram.com/fipi_iitism/p/Cp3aU6kSgB0/"]], "stats": [["1st", "national winner"]], "img": "petrojam-post"}, {"badge": "IM", "color": "#B02A1E", "org": "IIM Indore", "event": "IRIS: Zero One Infinity", "when": "Nov 2021", "title": "IT consultancy case, sponsored by SBI", "result": "National Winner · 1st position", "chips": ["1 of 5 finalists", "300+ teams", "100+ B-schools"], "problem": "An IT consultancy case sponsored by SBI, run during IRIS 2021 at IIM Indore.", "solution": ["Team Paratroops secured first position among five finalist teams, from 300+ teams across 100+ B-schools."], "proof": [["zoi-cert", "First position certificate", "https://www.linkedin.com/in/shubham-mishra-540/overlay/Honor/2101638129/treasury/"], ["zoi-poster", "Winner poster", "https://www.linkedin.com/in/shubham-mishra-540/overlay/Honor/2101638129/treasury/"]], "links": [["IRMA write-up", "https://irma.ac.in/news/837"]], "stats": [["1 of 5", "finalists"], ["300+", "teams"], ["100+", "B-schools"]], "img": "zoi-cert"}, {"badge": "VE", "color": "#6A2BBF", "org": "VESIM, Mumbai", "event": "Holocaust Case Study Competition", "when": "Dec 2021", "title": "Operations case", "result": "National Winner", "chips": ["1 of 5 finalists", "100+ teams"], "problem": "An operations case study competition hosted by VESIM Mumbai.", "solution": ["Won among five finalists out of 100+ teams from B-schools across the country."], "proof": [["holocaust-cert", "Winner certificate", "https://www.linkedin.com/in/shubham-mishra-540/overlay/Honor/1300303960/treasury/"], ["holocaust-post", "IRMA announcement", "https://www.linkedin.com/feed/update/urn:li:activity:6906517807299973120/"]], "links": [["LinkedIn post by IRMA", "https://www.linkedin.com/feed/update/urn:li:activity:6906517807299973120/"], ["IRMA write-up", "https://irma.ac.in/news/901"]], "stats": [["1 of 5", "finalists"], ["100+", "teams"]], "img": "holocaust-cert"}, {"badge": "NR", "color": "#0B5D3B", "org": "NIT Rourkela", "event": "SDG-2 Zero Hunger case study", "when": "Jan 2021", "title": "Best Research Report", "result": "National Winner", "chips": ["Zero Hunger (SDG-2)"], "problem": "A case study on the UN goal of Zero Hunger (SDG-2), judged on the quality of the research report.", "solution": ["Won Best Research Report at national level.", "Results announced by IRMA on Instagram."], "proof": [], "links": [["Post by IRMA", "https://www.instagram.com/irma_anand_official/p/CT67sZUIddl/"]], "stats": [["1st", "best research report"]], "img": null}, {"badge": "SS", "color": "#C2410C", "org": "St. Stephen's College, Delhi", "event": "Envision 2021", "when": "Dec 2021", "title": "Sustainable business plan", "result": "2nd Runner Up", "chips": ["3rd of 14 finalists", "920+ teams", "PPO offer"], "problem": "A sustainable business plan competition for B-schools across the country.", "solution": ["Ranked 3rd among 14 finalists out of 920+ teams.", "Won a Pre-Placement Offer from Energy Swaraj Foundation."], "proof": [["envision-post", "IRMA announcement", "https://www.linkedin.com/feed/update/urn:li:activity:6914070996127784960/"]], "links": [["LinkedIn post by IRMA", "https://www.linkedin.com/feed/update/urn:li:activity:6914070996127784960/"], ["IRMA write-up", "https://irma.ac.in/news/909"]], "stats": [["3rd", "of 14 finalists"], ["920+", "teams"], ["PPO", "offer won"]], "img": "envision-post"}, {"badge": "IR", "color": "#1B3A8A", "org": "iSEC, IRMA", "event": "Ideation Challenge 'Ideas Worth Sharing'", "when": "Feb 2022", "title": "Sustainable business plan", "result": "2nd Runner Up", "chips": ["Campus competition"], "problem": "A sustainable business plan ideation challenge run by IRMA’s Social Entrepreneurship Cell.", "solution": ["Finished as 2nd runner up."], "proof": [["isec-post", "Winners post", "https://www.instagram.com/isec_irma/p/CaeB7OGLdB6/"]], "links": [["Winner post", "https://www.instagram.com/isec_irma/p/CaeB7OGLdB6/"]], "stats": [["2nd", "runner up"]], "img": "isec-post"}, {"badge": "IM", "color": "#6A2BBF", "org": "IIM Indore", "event": "IRIS Ranbhoomi 8.0", "when": "Nov 2021", "title": "Go-to-market strategy case", "result": "National Finalist", "chips": ["1 of 15 finalists", "460+ teams"], "problem": "A go-to-market strategy case at IRIS, IIM Indore.", "solution": ["Reached the final as one of 15 teams out of 460+ from B-schools across India."], "proof": [["ranbhoomi-cert", "Certificate", "https://www.linkedin.com/in/shubham-mishra-540/overlay/Honor/1300484562/treasury/"], ["ranbhoomi-post", "IRMA announcement", "https://www.linkedin.com/feed/update/urn:li:activity:6886189327718617088/"]], "links": [["LinkedIn post by IRMA", "https://www.linkedin.com/feed/update/urn:li:activity:6886189327718617088/"], ["IRMA write-up", "https://irma.ac.in/news/852"]], "stats": [["1 of 15", "finalists"], ["460+", "teams"]], "img": "ranbhoomi-cert"}, {"badge": "LC", "color": "#B02A1E", "org": "Lions Club International", "event": "Socio Bizz", "when": "Apr 2023", "title": "Social business plan", "result": "National Finalist", "chips": ["1 of 5 finalists", "130+ teams incl. startups"], "problem": "A national social business plan competition, open to startups as well as students.", "solution": ["One of 5 finalists out of 130+ teams across India."], "proof": [["sociobizz-cert", "Finalist certificate", "https://www.linkedin.com/in/shubham-mishra-540/overlay/Honor/474908498/treasury/"]], "links": [["Honors on LinkedIn", "https://www.linkedin.com/in/shubham-mishra-540/details/honors/"]], "stats": [["1 of 5", "finalists"], ["130+", "teams"]], "img": "sociobizz-cert"}, {"badge": "NA", "color": "#0B5D3B", "org": "NAARM, Hyderabad", "event": "Samadhaan, Sankalp 6.0", "when": "Oct 2021", "title": "Supply chain case", "result": "National Finalist", "chips": ["Supply chain"], "problem": "A supply chain case study competition by ICAR-NAARM.", "solution": ["Named a National Finalist."], "proof": [["samadhaan-cert", "Finalist certificate", "https://www.linkedin.com/in/shubham-mishra-540/overlay/Honor/557398640/treasury/"]], "links": [["Honors on LinkedIn", "https://www.linkedin.com/in/shubham-mishra-540/details/honors/"]], "stats": [["Finalist", "national"]], "img": "samadhaan-cert"}, {"badge": "MS", "color": "#C2410C", "org": "MSI, New Delhi", "event": "Nothing Makes Sense", "when": "Nov 2021", "title": "Marketing B-plan", "result": "National Finalist", "chips": ["Marketing"], "problem": "A national business plan competition with a marketing case.", "solution": ["Named a National Finalist."], "proof": [], "links": [["Honors on LinkedIn", "https://www.linkedin.com/in/shubham-mishra-540/details/honors/"]], "stats": [["Finalist", "national"]], "img": null}]};
+  var tones=['tone-purple','tone-blue','tone-pink','tone-green'];
+  var notes={corp:'Company-run national competitions, as Team The Paratroops (IRMA, 2022 to 2023). Tap a tile for the problem and our solution.',bs:'Competitions run by business schools, engineering colleges and clubs.'};
+  var tiles=document.getElementById('ctiles'), mback=document.getElementById('mback'), mbody=document.getElementById('mbody'), last=null;
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  document.getElementById('n-corp').textContent=CC.corp.length; document.getElementById('n-bs').textContent=CC.bs.length;
+  function render(key){
+    document.getElementById('cc-note').textContent=notes[key];
+    tiles.innerHTML=CC[key].map(function(c,i){
+      var ban=c.img?'<span class="tbanner"><img src="img/'+c.img+'.jpg" alt="" loading="lazy"></span>':'<span class="tbanner num"><span>'+esc(c.stats[0][0])+'<small>'+esc(c.stats[0][1])+'</small></span></span>';
+      var rest=c.img?c.stats:c.stats.slice(1);
+      var st=rest.length?'<span class="tstats">'+rest.map(function(s){return '<span><b>'+esc(s[0])+'</b><span>'+esc(s[1])+'</span></span>'}).join('')+'</span>':'';
+      return '<button type="button" class="ctile tint '+tones[i%4]+'" data-k="'+key+'" data-i="'+i+'" aria-haspopup="dialog">'+ban+
+       '<span class="ctop"><span class="badge" style="background:'+c.color+'" aria-hidden="true">'+esc(c.badge)+'</span><span class="meta"><span class="org">'+esc(c.org)+'</span><span class="when">'+esc(c.event)+' · '+esc(c.when)+'</span></span></span>'+
+       '<h3>'+esc(c.title)+'</h3><span class="rk">'+esc(c.result)+'</span>'+st+
+       '<span class="cc-more">See problem and solution <svg class="ic"><use href="#i-arrow"/></svg></span></button>';
+    }).join('');
+  }
+  function open(k,i){
+    var c=CC[k][i]; last=document.activeElement;
+    var proof=c.proof.map(function(p){return '<figure><a href="'+esc(p[2])+'" target="_blank" rel="noopener"><img src="img/'+p[0]+'.jpg" alt="'+esc(p[1])+'" loading="lazy"></a><figcaption>'+esc(p[1])+'</figcaption></figure>'}).join('');
+    mbody.innerHTML='<div class="mhead"><span class="badge" style="background:'+c.color+'" aria-hidden="true">'+esc(c.badge)+'</span><div><h3 id="m-title">'+esc(c.title)+'</h3><span class="when">'+esc(c.org)+' · '+esc(c.event)+' · '+esc(c.when)+'</span></div></div>'+
+     '<div class="chips"><span class="tag tone-green tint">'+esc(c.result)+'</span>'+c.chips.map(function(x){return '<span class="tag tone-purple tint">'+esc(x)+'</span>'}).join('')+'</div>'+
+     '<h4>'+(k==='corp'?'Problem statement':'The brief')+'</h4><p>'+esc(c.problem)+'</p>'+
+     '<h4>'+(k==='corp'?'Our solution':'What we did')+'</h4><ul>'+c.solution.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>'+
+     (proof?'<h4>Certificates and posts</h4><div class="proof">'+proof+'</div>':'')+
+     '<div class="mlinks">'+c.links.map(function(l){return '<a href="'+esc(l[1])+'" target="_blank" rel="noopener">'+esc(l[0])+' ↗</a>'}).join('')+'</div>';
+    mback.classList.add('open'); mback.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+    document.getElementById('mclose').focus();
+  }
+  function close(){mback.classList.remove('open'); mback.setAttribute('aria-hidden','true'); document.body.style.overflow=''; if(last&&last.focus)last.focus();}
+  tiles.addEventListener('click',function(e){var t=e.target.closest('.ctile'); if(t) open(t.dataset.k,+t.dataset.i)});
+  document.getElementById('mclose').addEventListener('click',close);
+  mback.addEventListener('click',function(e){if(e.target===mback)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mback.classList.contains('open'))close()});
+  var tabs=[].slice.call(document.querySelectorAll('.cc-tab'));
+  function select(t){tabs.forEach(function(x){var on=x===t; x.setAttribute('aria-selected',on); x.tabIndex=on?0:-1}); document.getElementById('panel-cc').setAttribute('aria-labelledby',t.id); render(t.dataset.tab)}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){select(t)}); t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length]; select(n); n.focus()}})});
+  render('corp');
+})();
+</script>
+</body>
+</html>
