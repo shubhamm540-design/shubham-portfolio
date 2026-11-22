@@ -182,6 +182,36 @@ main{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
 .bfull{align-self:stretch;text-align:center;padding:12px 18px;border-radius:999px;background:var(--ink);color:#fff;font:600 15px var(--font-display);text-decoration:none}
 .bfull:hover{background:rgb(var(--c))}
 @media(max-width:560px){.bsteps{grid-template-columns:1fr}.bstep{min-height:0}}
+
+.bslide{transition:transform .2s,box-shadow .2s}
+.bslide:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(var(--c),.22)}
+.bhead{margin:-26px -26px 0;padding:22px 26px 16px;border-radius:16px 16px 0 0;background:linear-gradient(135deg,rgba(var(--c),.35),rgba(255,255,255,.2))}
+.blogo{width:58px;height:58px;border-radius:50%;border:2px solid #fff;box-shadow:0 4px 12px rgba(var(--c),.35);background:linear-gradient(135deg,rgb(var(--c)),rgba(var(--c),.55));color:#fff;font-size:26px}
+.blogo:before{z-index:0}
+.blogo img{z-index:1;position:absolute;inset:0;margin:auto;width:34px;height:34px;object-fit:contain;border-radius:50%;background:#fff;padding:0;box-shadow:0 0 0 12px #fff}
+.bt h3{font-size:28px}
+.bhint{display:flex;align-items:center;gap:8px;margin:4px 0 -2px;font:600 12.5px var(--font-display);text-transform:uppercase;letter-spacing:.06em;color:var(--ink)}
+.bhint i{width:9px;height:9px;border-radius:50%;background:rgb(var(--c));animation:bp 1.4s infinite}
+@keyframes bp{0%{box-shadow:0 0 0 0 rgba(var(--c),.6)}100%{box-shadow:0 0 0 10px rgba(var(--c),0)}}
+.bstep{position:relative;border:2px solid rgb(var(--c));box-shadow:0 5px 0 rgb(var(--c));background:linear-gradient(160deg,#fff,rgba(var(--c),.12));padding-right:46px;transition:transform .12s,box-shadow .12s,background .15s}
+.bstep u{position:absolute;right:12px;top:50%;margin-top:-15px;width:30px;height:30px;border-radius:50%;background:rgb(var(--c));color:#fff;text-decoration:none;display:grid;place-items:center;font:600 20px/1 var(--font-display);transition:transform .25s}
+.bstep:hover{transform:translateY(-2px);box-shadow:0 7px 0 rgb(var(--c));background:linear-gradient(160deg,rgba(var(--c),.18),rgba(var(--c),.35));color:var(--ink)}
+.bstep:hover em{color:var(--ink)}
+.bstep:hover i{background:rgb(var(--c));color:#fff}
+.bstep:active{transform:translateY(4px);box-shadow:0 1px 0 rgb(var(--c))}
+.bstep[aria-expanded="true"]{transform:translateY(4px);box-shadow:0 1px 0 rgb(var(--c));background:rgb(var(--c));color:#fff}
+.bstep[aria-expanded="true"] em{color:rgba(255,255,255,.9)}
+.bstep[aria-expanded="true"] i,.bstep[aria-expanded="true"] u{background:#fff;color:rgb(var(--c))}
+.bstep[aria-expanded="true"] u{transform:rotate(45deg)}
+.bpanel:not([hidden]){animation:pop .25s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.bfull{box-shadow:0 5px 0 rgb(var(--c));transition:transform .12s,box-shadow .12s}
+.bfull:hover{transform:translateY(-2px)}
+.bslide{min-width:0}
+.bsteps{grid-template-columns:1fr!important;gap:12px}
+.bstep{min-height:0!important;padding:12px 52px 12px 14px}
+.bstep span{min-width:0}
+@media(prefers-reduced-motion:reduce){.bhint i,.bpanel:not([hidden]){animation:none}.bslide,.bstep,.bfull{transition:none}}
 .bslide .open{align-self:flex-start;display:inline-flex;gap:6px;align-items:center;padding:9px 18px;border-radius:999px;background:#fff;border:.8px solid rgba(var(--c),.6);font-size:15px;font-weight:600;text-decoration:none;color:var(--ink)}
 .bslide .open:after{content:"";position:absolute;inset:0;border-radius:16px}
 .bslide .open:focus-visible{outline:none}
@@ -827,14 +857,14 @@ input[type=range]{width:100%;accent-color:#9747FF}
   function brandSlide(b){
     var p=pub[b.name]||{},id=b.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
     var host=p.w.replace(/^https?:\/\/(www\.)?/,'').replace(/\/.*$/,'');
-    var btns=steps.map(function(t){return '<button type="button" class="bstep" data-k="'+t[0]+'" aria-expanded="false" aria-controls="bp-'+id+'"><i>'+t[1]+'</i><span><b>'+t[2]+'</b><em>'+t[3]+'</em></span></button>';}).join('');
+    var btns=steps.map(function(t){return '<button type="button" class="bstep" data-k="'+t[0]+'" aria-expanded="false" aria-controls="bp-'+id+'"><i>'+t[1]+'</i><span><b>'+t[2]+'</b><em>'+t[3]+'</em></span><u aria-hidden="true">+</u></button>';}).join('');
     return '<article class="bslide tint2 tone-'+b.tone+'" data-b="'+id+'">'+
-      '<header class="bhead"><span class="blogo" data-i="'+b.name.charAt(0)+'"><img src="https://www.google.com/s2/favicons?domain='+host+'&sz=128" alt="" width="40" height="40" loading="lazy" onerror="this.remove()"></span>'+
+      '<header class="bhead"><span class="blogo" data-i="'+b.name.charAt(0)+'"><img src="https://www.google.com/s2/favicons?domain='+host+'&sz=64" alt="" width="32" height="32" loading="lazy" onerror="this.remove()"></span>'+
       '<div class="bt"><h3>'+b.name+'</h3><span class="tag">'+b.ind.replace('&','&amp;')+'</span></div></header>'+
       '<div class="bmeta"><span><small>Founded</small><b>'+p.f+'</b></span><span><small>Revenue</small><b>'+p.r+'</b></span>'+'<div class="blinks"><a href="'+p.w+'" target="_blank" rel="noopener" aria-label="'+b.name+' website">Site ↗</a>'+
       '<a href="'+p.l+'" target="_blank" rel="noopener" aria-label="'+b.name+' on LinkedIn">in</a></div></div>'+
       '<p class="bnote">'+p.rn+'</p>'+
-      '<div class="bsteps">'+btns+'</div>'+
+      '<p class="bhint"><i></i>Tap a tile to explore</p><div class="bsteps">'+btns+'</div>'+
       '<div class="bpanel" id="bp-'+id+'" hidden></div>'+
       '<a class="bfull" href="'+id+'/">Click here to read the full strategy <span aria-hidden="true">→</span></a></article>';
   }
