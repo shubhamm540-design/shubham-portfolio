@@ -872,7 +872,7 @@ input[type=range]{width:100%;accent-color:#9747FF}
     var host=p.w.replace(/^https?:\/\/(www\.)?/,'').replace(/\/.*$/,'');
     var btns=steps.map(function(t){return '<button type="button" class="bstep" data-k="'+t[0]+'" aria-expanded="false" aria-controls="bp-'+id+'"><i>'+t[1]+'</i><span><b>'+t[2]+'</b><em>'+t[3]+'</em></span><u aria-hidden="true">+</u></button>';}).join('');
     return '<article class="bslide tint2 tone-'+b.tone+'" data-b="'+id+'">'+
-      '<header class="bhead"><span class="blogo" data-i="'+b.name.charAt(0)+'">'+(p.nologo?'':'<img src="https://www.google.com/s2/favicons?domain='+host+'&sz=128" alt="" width="32" height="32" loading="lazy" onerror="this.remove()">')+'</span>'+
+      '<header class="bhead"><span class="blogo" data-i="'+b.name.charAt(0)+'">'+(p.nologo?'':'<img src="https://www.google.com/s2/favicons?domain='+host+'&sz=128" alt="" width="32" height="32" onerror="this.remove()">')+'</span>'+
       '<div class="bt"><h3>'+b.name+'</h3><span class="tag">'+b.ind.replace('&','&amp;')+'</span></div>'+
       '<div class="blinks"><a href="'+p.w+'" target="_blank" rel="noopener" aria-label="'+b.name+' website"><span>Website</span> ↗</a>'+
       '<a href="'+p.l+'" target="_blank" rel="noopener" aria-label="'+b.name+' on LinkedIn"><span>LinkedIn</span> ↗</a></div></header>'+
