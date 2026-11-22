@@ -153,6 +153,22 @@ main{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
 .bt-tab[aria-selected="true"] .n{background:rgba(255,255,255,.25)}
 .bt-tab:focus-visible{outline:3px solid #1D192B;outline-offset:2px}
 .bslide{position:relative}
+.pubd{align-items:start;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}
+.pubd>div{background:rgba(255,255,255,.7);border:.8px solid rgba(var(--c),.45);border-radius:12px;padding:9px 12px;min-width:0}
+.pubd dt{font:600 12px var(--font-display);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.pubd dd{margin:2px 0 0;font-weight:600;font-size:16px;overflow-wrap:anywhere}
+.pubd dd small{display:block;font-weight:500;font-size:12.5px;color:var(--muted);margin-top:2px}
+.pubd a{text-decoration:underline;text-underline-offset:3px}
+.bsteps{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bstep{display:flex;gap:10px;align-items:center;text-align:left;padding:10px 12px;border-radius:12px;border:.8px solid rgba(var(--c),.6);background:#fff;font:600 11.5px/1.25 var(--font-display);text-transform:uppercase;letter-spacing:0;color:var(--ink);cursor:pointer}
+.bstep i{flex:none;width:24px;height:24px;border-radius:50%;background:rgb(var(--c));color:#fff;font-style:normal;display:grid;place-items:center;font-size:13px}
+.bstep:hover,.bstep[aria-expanded="true"]{background:rgb(var(--c));color:#fff}
+.bstep:hover i,.bstep[aria-expanded="true"] i{background:#fff;color:rgb(var(--c))}
+.bstep:focus-visible{outline:3px solid #1D192B;outline-offset:2px}
+.bpanel{background:rgba(255,255,255,.85);border:.8px dashed rgba(var(--c),.7);border-radius:14px;padding:14px 16px;font-size:15px}
+.bpanel h4{margin:0 0 6px;font-size:15px}
+.bpanel .soon{margin:0;color:var(--muted)}
+@media(max-width:560px){.pubd,.bsteps{grid-template-columns:1fr}}
 .bslide .open{align-self:flex-start;display:inline-flex;gap:6px;align-items:center;padding:9px 18px;border-radius:999px;background:#fff;border:.8px solid rgba(var(--c),.6);font-size:15px;font-weight:600;text-decoration:none;color:var(--ink)}
 .bslide .open:after{content:"";position:absolute;inset:0;border-radius:16px}
 .bslide .open:focus-visible{outline:none}
@@ -766,17 +782,49 @@ input[type=range]{width:100%;accent-color:#9747FF}
      plays:[['Lifecycle','A first-30-days habit journey. Push the second class booking within a week, and reach inactive members before a long gap sets in.'],['Cross-sell','Suggest gear that matches the class a member attends, rather than the whole catalogue.'],['Gamification','An attendance streak with a leaderboard for each centre.']],
      metric:'Renewal rate · Classes per member per month',proof:'D30 retention 1.3% → 4.1%',why:'Retention journeys by cohort are my core work.'},
   ];
+  /* Public data per brand. Seed the 4 buttons by filling u / g / b / s (HTML allowed). u=Understand the brand, g=Decode the GTM, b=Benchmark & identifying gaps, s=Building the growth strategy with Shubham */
+  var pub={
+    'Country Delight':{f:'2015',r:'₹1,380 Cr',rn:'FY24 · press-reported (The Arc)',w:'https://www.countrydelight.in',l:'https://www.linkedin.com/company/countrydelight/',u:'',g:'',b:'',s:''},
+    'Sleepy Owl':{f:'2016',r:'₹44.4 Cr',rn:'FY25 · RoC filing',w:'https://sleepyowl.co',l:'https://www.linkedin.com/company/sleepy-owl-coffee/',u:'',g:'',b:'',s:''},
+    'The Whole Truth':{f:'2019',r:'₹216 Cr',rn:'FY25 · RoC filing',w:'https://thewholetruthfoods.com',l:'https://www.linkedin.com/search/results/companies/?keywords=The%20Whole%20Truth%20Foods',u:'',g:'',b:'',s:''},
+    'Moxie Beauty':{f:'2023',r:'₹18.6 Cr',rn:'FY25 · RoC filing; company claims ₹100 Cr+ run-rate',w:'https://moxiebeauty.in',l:'https://www.linkedin.com/company/moxie-beauty/',u:'',g:'',b:'',s:''},
+    'Mamaearth':{f:'2016',r:'₹2,392 Cr',rn:'FY26 · Honasa Consumer (parent), reported',w:'https://mamaearth.in',l:'https://www.linkedin.com/company/mamaearth/',u:'',g:'',b:'',s:''},
+    'Wakefit':{f:'2016',r:'₹1,489 Cr',rn:'FY26 · listed company results',w:'https://www.wakefit.co',l:'https://www.linkedin.com/search/results/companies/?keywords=Wakefit%20Innovations',u:'',g:'',b:'',s:''},
+    'boAt':{f:'2013',r:'₹3,098 Cr',rn:'FY25 · Imagine Marketing (parent), consolidated',w:'https://www.boat-lifestyle.com',l:'https://www.linkedin.com/company/boat-lifestyle/',u:'',g:'',b:'',s:''},
+    'Nykaa':{f:'2012',r:'₹10,022 Cr',rn:'FY26 · FSN E-Commerce, consolidated',w:'https://www.nykaa.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Nykaa',u:'',g:'',b:'',s:''},
+    'Myntra':{f:'2007',r:'₹6,043 Cr',rn:'FY25 · RoC filing',w:'https://www.myntra.com',l:'https://www.linkedin.com/company/myntra/',u:'',g:'',b:'',s:''},
+    'PhysicsWallah':{f:'2016',r:'₹3,900 Cr',rn:'FY26 · listed company results',w:'https://www.pw.live',l:'https://www.linkedin.com/company/physicswallah/',u:'',g:'',b:'',s:''},
+    'upGrad':{f:'2015',r:'₹2,070 Cr',rn:'FY26 · gross revenue incl. taxes, company-reported',w:'https://www.upgrad.com',l:'https://www.linkedin.com/school/upgrad/',u:'',g:'',b:'',s:''},
+    'Internshala':{f:'2010',r:'₹44.1 Cr',rn:'FY25 · RoC filing; upGrad owns a majority stake',w:'https://internshala.com',l:'https://www.linkedin.com/company/internshala/',u:'',g:'',b:'',s:''},
+    'apna':{f:'2019',r:'₹144 Cr',rn:'FY25 · total revenue per Inc42',w:'https://apna.co',l:'https://www.linkedin.com/search/results/companies/?keywords=apna.co',u:'',g:'',b:'',s:''},
+    'Bla Bli Blu':{f:'2025',r:'₹250 Cr ARR',rn:'Oct 2026 · company claim, annualised run-rate',w:'https://blabliblu.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Bla%20Bli%20Blu',u:'',g:'',b:'',s:''},
+    'Suroskie':{f:'2020',r:'Not disclosed',rn:'No public financials found',w:'https://suroskie.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Suroskie',u:'',g:'',b:'',s:''},
+    'BeCalm':{f:'Not found',r:'Not disclosed',rn:'No public financials found',w:'https://www.instagram.com/lets_becalm/',l:'https://www.linkedin.com/search/results/companies/?keywords=BeCalm%20skincare',u:'',g:'',b:'',s:''},
+    'Scrubsy':{f:'2025',r:'Not disclosed',rn:'Raised ₹27 Cr in Aug 2026; no revenue reported',w:'https://scrubsy.co.in',l:'https://www.linkedin.com/search/results/companies/?keywords=Scrubsy',u:'',g:'',b:'',s:''},
+    'Snitch':{f:'2019',r:'₹900 Cr',rn:'FY26 · founder-reported (unaudited)',w:'https://www.snitch.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Snitch',u:'',g:'',b:'',s:''},
+    'Bewakoof':{f:'2012',r:'₹243 Cr',rn:'FY26 · per Inc42',w:'https://www.bewakoof.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Bewakoof',u:'',g:'',b:'',s:''},
+    'Groww':{f:'2016',r:'₹4,645 Cr',rn:'FY26 · Billionbrains Garage Ventures, consolidated',w:'https://groww.in',l:'https://www.linkedin.com/company/groww/',u:'',g:'',b:'',s:''},
+    'CRED':{f:'2018',r:'₹2,735 Cr',rn:'FY25 · operating revenue, company-reported',w:'https://cred.club',l:'https://www.linkedin.com/search/results/companies/?keywords=CRED',u:'',g:'',b:'',s:''},
+    'ixigo':{f:'2007',r:'₹1,228 Cr',rn:'FY26 · Le Travenues Technology, listed',w:'https://www.ixigo.com',l:'https://www.linkedin.com/company/ixigo/',u:'',g:'',b:'',s:''},
+    'Zepto':{f:'2021',r:'₹22,624 Cr',rn:'FY26 · IPO filing (UDRHP)',w:'https://www.zepto.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Zepto',u:'',g:'',b:'',s:''},
+    'HealthKart':{f:'2011',r:'₹1,313 Cr',rn:'FY25 · RoC filing',w:'https://www.healthkart.com',l:'https://www.linkedin.com/search/results/companies/?keywords=HealthKart',u:'',g:'',b:'',s:''},
+    'cult.fit':{f:'2016',r:'₹1,721 Cr',rn:'FY26 · IPO filing (DRHP)',w:'https://www.cult.fit',l:'https://www.linkedin.com/search/results/companies/?keywords=cult.fit',u:'',g:'',b:'',s:''}
+  };
+  var steps=[['u','1','Understand the brand'],['g','2','Decode the GTM'],['b','3','Benchmark & identifying gaps'],['s','4','Building the growth strategy with Shubham']];
   function brandSlide(b){
-    var plays=b.plays.map(function(p){return '<li><em>'+p[0]+'</em><span>'+p[1]+'</span></li>';}).join('');
-    return '<article class="bslide tint2 tone-'+b.tone+'">'+
-      '<span class="tag">'+b.cat+'</span>'+
+    var p=pub[b.name]||{},id=b.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+    var btns=steps.map(function(t){return '<button type="button" class="bstep" data-k="'+t[0]+'" aria-expanded="false" aria-controls="bp-'+id+'"><i>'+t[1]+'</i><span>'+t[2]+'</span></button>';}).join('');
+    return '<article class="bslide tint2 tone-'+b.tone+'" data-b="'+id+'">'+
+      '<span class="tag">'+b.ind.replace('&','&amp;')+'</span>'+
       '<h3>'+b.name+'</h3>'+
-      '<p class="fact"><b>Public fact:</b> '+b.fact+' <a href="'+b.url+'">Source</a></p>'+
-      '<ul class="plays">'+plays+'</ul>'+
-      '<div class="pills"><span>Metric: '+b.metric+'</span></div>'+
-      '<div class="pills"><span class="p">My proof: '+b.proof+'</span></div>'+
-      '<a class="open" href="'+b.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'/" aria-label="Open the full plan for '+b.name+'">Open the full plan <span aria-hidden="true">→</span></a>'+
-      '<span class="foot">'+b.why+'</span></article>';
+      '<dl class="pubd">'+
+        '<div><dt>Founded</dt><dd>'+p.f+'</dd></div>'+
+        '<div><dt>Current revenue</dt><dd>'+p.r+'<small>'+p.rn+'</small></dd></div>'+
+        '<div><dt>Website</dt><dd><a href="'+p.w+'" target="_blank" rel="noopener">'+p.w.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'')+' ↗</a></dd></div>'+
+        '<div><dt>LinkedIn</dt><dd><a href="'+p.l+'" target="_blank" rel="noopener">'+(p.l.indexOf('/search/')>-1?'Find on LinkedIn':'Company page')+' ↗</a></dd></div>'+
+      '</dl>'+
+      '<div class="bsteps">'+btns+'</div>'+
+      '<div class="bpanel" id="bp-'+id+'" hidden></div></article>';
   }
 
   /* ---------- carousel ---------- */
@@ -824,6 +872,17 @@ input[type=range]{width:100%;accent-color:#9747FF}
   var inds=['Beauty & Personal Care','FMCG','HR-Tech','Ed-Tech','E-commerce & D2C','Fashion & Lifestyle','Fintech','Travel','Quick Commerce','Health & Fitness'];
   function inInd(i){return brands.filter(function(b){return b.ind===inds[i];});}
   var brandCar=carousel('c2','s2','d2',inInd(0),brandSlide,null);
+  $('s2').addEventListener('click',function(ev){
+    var bt=ev.target.closest('.bstep');if(!bt){return;}
+    var card=bt.closest('.bslide'),panel=card.querySelector('.bpanel'),k=bt.getAttribute('data-k');
+    var was=bt.getAttribute('aria-expanded')==='true';
+    [].forEach.call(card.querySelectorAll('.bstep'),function(x){x.setAttribute('aria-expanded','false');});
+    if(was){panel.hidden=true;return;}
+    var name=card.querySelector('h3').textContent,p=pub[name]||{},st=steps.filter(function(t){return t[0]===k;})[0];
+    bt.setAttribute('aria-expanded','true');
+    panel.innerHTML='<h4>'+st[1]+'. '+st[2]+'</h4>'+(p[k]?'<div>'+p[k]+'</div>':'<p class="soon">Coming soon. This part of the analysis is being written.</p>');
+    panel.hidden=false;
+  });
   (function(){
     var box=$('bt-tabs');
     box.innerHTML=inds.map(function(n,i){
