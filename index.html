@@ -135,11 +135,15 @@ main{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
 .bslide .tag{background:rgba(255,255,255,.7)}
 .bslide h3{font-size:32px}
 .bt-bar{display:flex;gap:10px;align-items:flex-start;margin:0 0 14px}
-.bt-bar .bt-tabs{flex:1;min-width:0;margin:0;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding:2px 28px 2px 2px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 36px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 36px),transparent)}
+.bt-bar .bt-tabs{flex:1;min-width:0;margin:0;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding:2px}
 .bt-bar .bt-tabs::-webkit-scrollbar{display:none}
 .bt-bar .bt-tab{flex:none;white-space:nowrap}
 .bt-search{position:relative;flex:0 0 230px}
-@media(max-width:820px){.bt-bar{flex-direction:column;align-items:stretch}.bt-bar .bt-tabs{padding-right:36px}.bt-search{flex:none;max-width:none}}
+.bt-nav{flex:1;min-width:0;display:flex;align-items:center;gap:6px}
+.bt-arr{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid rgb(var(--c));background:#fff;color:rgb(var(--c));font:700 22px/1 var(--font-display);cursor:pointer;display:grid;place-items:center;padding:0 0 3px;transition:transform .15s,background .15s,color .15s}
+.bt-arr:hover{background:rgb(var(--c));color:#fff;transform:scale(1.08)}
+.bt-arr:disabled{opacity:.35;cursor:default;transform:none;background:#fff;color:rgb(var(--c))}
+@media(max-width:820px){.bt-bar{flex-direction:column;align-items:stretch}.bt-bar .bt-tabs{padding-right:2px}.bt-search{flex:none;max-width:none}}
 .bt-search .ic{position:absolute;left:16px;top:50%;width:18px;height:18px;transform:translateY(-50%);color:#3B3650;pointer-events:none}
 .bt-search input{width:100%;height:40px;padding:0 44px 0 44px;border-radius:100px;border:.8px solid rgba(var(--blue),.55);background:rgba(255,255,255,.85);font:500 15px var(--font-body,inherit);color:#1D192B}
 .bt-search input::-webkit-search-cancel-button{display:none}
@@ -167,6 +171,8 @@ main{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
 .bmeta small{font:600 11px var(--font-display);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .bmeta b{font-size:15px;white-space:nowrap}
 .bnote{margin:-4px 2px 0;font-size:12px;color:var(--muted)}
+.bhead .blinks{margin-left:auto;align-self:flex-start}
+@media(max-width:420px){.bhead{flex-wrap:wrap}.bhead .blinks{margin-left:0;width:100%}}
 .bsteps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .bstep{display:flex;gap:12px;align-items:center;text-align:left;padding:16px 14px;min-height:92px;border-radius:16px;border:.8px solid rgba(var(--c),.6);background:#fff;color:var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s}
 .bstep i{flex:none;width:34px;height:34px;border-radius:50%;background:rgb(var(--c));color:#fff;font:700 16px var(--font-display);font-style:normal;display:grid;place-items:center}
@@ -227,6 +233,7 @@ main{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
 .pills{display:flex;flex-wrap:wrap;gap:8px}
 .pills span{border-radius:12px;padding:6px 12px;font-size:14px;font-weight:500;background:rgb(var(--c));color:#fff}
 .pills span.p{background:rgba(255,255,255,.75);color:var(--ink);border:.8px solid rgba(var(--c),.5)}
+.note-r{color:#d6202a}
 .disc{font-size:14px;color:var(--muted);margin-top:14px;max-width:78ch}
 @media (min-width:1100px){.brandwrap .bslide{flex-basis:calc(50% - 4px)}}
 
@@ -556,22 +563,22 @@ input[type=range]{width:100%;accent-color:#9747FF}
   <!-- Carousel 2: what I would do for brands -->
   <section class="wrap tint tone-blue brandwrap" id="brands" aria-labelledby="brands-h">
     <div class="sh">
-      <h2 id="brands-h">If I Join Your Brand</h2>
-      <div class="ctrl" data-for="c2">
+      <h2 id="brands-h">Brands I Would Love to Grow</h2>
+      <div class="ctrl" data-for="c2" hidden style="display:none">
         <button type="button" data-dir="-1" aria-label="Previous brand"><svg class="ic"><use href="#i-left"/></svg></button>
         <span class="count" aria-live="polite">1 / 2</span>
         <button type="button" data-dir="1" aria-label="Next brand"><svg class="ic"><use href="#i-right"/></svg></button>
       </div>
     </div>
-    <p class="lede">My analysis of a problem a brand is having, and how I would fix it.</p>
+    <p class="lede">My Brand Audit and My strategy to grow the brand.</p>
     <div class="bt-bar">
     <div class="bt-search"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><input id="bt-q" type="search" placeholder="Search brand, industry" aria-label="Search brands or industries" autocomplete="off"><button type="button" id="bt-x" aria-label="Clear search" hidden>×</button></div>
-    <div class="bt-tabs" id="bt-tabs" role="tablist" aria-label="Industry"></div>
+    <div class="bt-nav"><button type="button" class="bt-arr" id="bt-prev" aria-label="Scroll industries left">&#8249;</button><div class="bt-tabs" id="bt-tabs" role="tablist" aria-label="Industry"></div><button type="button" class="bt-arr" id="bt-next" aria-label="Scroll industries right">&#8250;</button></div>
     </div>
     <div class="viewport" id="c2" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Plans for Beauty &amp; Personal Care brands, swipe or use arrows"><div class="slides" id="s2"></div></div>
     <div class="dots" id="d2"></div>
     <p class="bt-empty" id="bt-empty" hidden>No brand or industry matches that yet. Try Fintech, Travel or Beauty.</p>
-    <p class="disc"><b>NOTE:</b> These are hypotheses built from public information. I have not seen any of these brands' internal data.</p>
+    <p class="disc"><b class="note-r">NOTE:</b> These are hypotheses built from public information. I have not seen any of these brands' internal data.</p>
   </section>
 
   <!-- What I do -->
@@ -773,9 +780,6 @@ input[type=range]{width:100%;accent-color:#9747FF}
     {tone:'blue',cat:'Haircare · Repeat purchase',name:'Moxie Beauty',ind:'Beauty & Personal Care',fact:'Reports ₹100 Cr+ annual run-rate within two years of launch and overall retention above 40%, selling on its own site, Nykaa, Amazon and quick commerce (BeautyMatter, Dec 2025).',url:'https://beautymatter.com/articles/haircare-brand-moxie-beauty-raises-15-million',
      plays:[['Lifecycle','A pack QR leads to a hair-type quiz that enrols marketplace and quick-commerce buyers in WhatsApp and email. A routine journey follows: curl cream, then leave-in, then mask.'],['Reorder','Reminders timed to pack size that point to the fastest place to buy: its own site, Nykaa or quick commerce.'],['Community','Reviews tagged by hair type, plus a wash-day challenge with a leaderboard that feeds product pages and ads.']],
      metric:'90-day repeat rate by channel · Second-product rate',proof:'D30 retention 1.3% → 4.1%',why:'First step: define what “40% retention” means, by channel and first product.'},
-    {tone:'pink',cat:'Beauty and personal care · Routine',name:'Mamaearth',ind:'Beauty & Personal Care',fact:'A MoEngage case study reports a 26% rise in repeat customers from segmentation and post-purchase journeys.',url:'https://www.moengage.com/casestudy/mamaearth-increases-delivery-rates-by-200x/',
-     plays:[['Lifecycle','Routine journeys. After a first order, guide a three-step routine and nudge the next product when it is due.'],['Community','A creator leaderboard that turns top customers into micro-creators, like the Practice leaderboard cards.'],['Push','Audit delivery rate and CTR by segment, then A/B test timing and creative.']],
-     metric:'90-day repeat rate · UGC volume',proof:'CTR 1.2% → 3.9%',why:'Segment-level A/B testing in MoEngage at Unstop.'},
     {tone:'green',cat:'Sleep and home · SEO',name:'Wakefit',ind:'E-commerce & D2C',fact:'Its SEO and content programme won Best Content Marketing Strategy at Content Marketing Summit Asia 2022, per agency Social Beat.',url:'https://www.socialbeat.in/blog/how-we-increased-organic-taffic-and-revenue-d2c-case-study/',
      plays:[['SEO','A sleep and home hub, linked to comparison and buying-guide pages such as memory foam versus spring.'],['Lifecycle','A post-purchase journey that suggests the next item, such as a pillow or bedsheet, at the right week after delivery.'],['Reviews','Ask for long-form reviews with a short sleep check-in, and feature them on category pages.']],
      metric:'Non-brand organic revenue · Second-category rate',proof:'47% of MAU growth from one segment',why:'Cohort and attribution models to find what converts.'},
@@ -831,7 +835,6 @@ input[type=range]{width:100%;accent-color:#9747FF}
     'Sleepy Owl':{f:'2016',r:'₹44.4 Cr',rn:'FY25 · RoC filing',w:'https://sleepyowl.co',l:'https://www.linkedin.com/company/sleepy-owl-coffee/',u:'',g:'',b:'',s:''},
     'The Whole Truth':{f:'2019',r:'₹216 Cr',rn:'FY25 · RoC filing',w:'https://thewholetruthfoods.com',l:'https://www.linkedin.com/search/results/companies/?keywords=The%20Whole%20Truth%20Foods',u:'',g:'',b:'',s:''},
     'Moxie Beauty':{f:'2023',r:'₹18.6 Cr',rn:'FY25 · RoC filing; company claims ₹100 Cr+ run-rate',w:'https://moxiebeauty.in',l:'https://www.linkedin.com/company/moxie-beauty/',u:'',g:'',b:'',s:''},
-    'Mamaearth':{f:'2016',r:'₹2,392 Cr',rn:'FY26 · Honasa Consumer (parent), reported',w:'https://mamaearth.in',l:'https://www.linkedin.com/company/mamaearth/',u:'',g:'',b:'',s:''},
     'Wakefit':{f:'2016',r:'₹1,489 Cr',rn:'FY26 · listed company results',w:'https://www.wakefit.co',l:'https://www.linkedin.com/search/results/companies/?keywords=Wakefit%20Innovations',u:'',g:'',b:'',s:''},
     'boAt':{f:'2013',r:'₹3,098 Cr',rn:'FY25 · Imagine Marketing (parent), consolidated',w:'https://www.boat-lifestyle.com',l:'https://www.linkedin.com/company/boat-lifestyle/',u:'',g:'',b:'',s:''},
     'Nykaa':{f:'2012',r:'₹10,022 Cr',rn:'FY26 · FSN E-Commerce, consolidated',w:'https://www.nykaa.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Nykaa',u:'',g:'',b:'',s:''},
@@ -860,9 +863,10 @@ input[type=range]{width:100%;accent-color:#9747FF}
     var btns=steps.map(function(t){return '<button type="button" class="bstep" data-k="'+t[0]+'" aria-expanded="false" aria-controls="bp-'+id+'"><i>'+t[1]+'</i><span><b>'+t[2]+'</b><em>'+t[3]+'</em></span><u aria-hidden="true">+</u></button>';}).join('');
     return '<article class="bslide tint2 tone-'+b.tone+'" data-b="'+id+'">'+
       '<header class="bhead"><span class="blogo" data-i="'+b.name.charAt(0)+'"><img src="https://www.google.com/s2/favicons?domain='+host+'&sz=64" alt="" width="32" height="32" loading="lazy" onerror="this.remove()"></span>'+
-      '<div class="bt"><h3>'+b.name+'</h3><span class="tag">'+b.ind.replace('&','&amp;')+'</span></div></header>'+
-      '<div class="bmeta"><span><small>Founded</small><b>'+p.f+'</b></span><span><small>Revenue</small><b>'+p.r+'</b></span>'+'<div class="blinks"><a href="'+p.w+'" target="_blank" rel="noopener" aria-label="'+b.name+' website">Site ↗</a>'+
-      '<a href="'+p.l+'" target="_blank" rel="noopener" aria-label="'+b.name+' on LinkedIn">in</a></div></div>'+
+      '<div class="bt"><h3>'+b.name+'</h3><span class="tag">'+b.ind.replace('&','&amp;')+'</span></div>'+
+      '<div class="blinks"><a href="'+p.w+'" target="_blank" rel="noopener" aria-label="'+b.name+' website">Site ↗</a>'+
+      '<a href="'+p.l+'" target="_blank" rel="noopener" aria-label="'+b.name+' on LinkedIn">in</a></div></header>'+
+      '<div class="bmeta"><span><small>Founded</small><b>'+p.f+'</b></span><span><small>Revenue</small><b>'+p.r+'</b></span>'+'</div>'+
       '<p class="bnote">'+p.rn+'</p>'+
       '<p class="bhint"><i></i>Tap a tile to explore</p><div class="bsteps">'+btns+'</div>'+
       '<div class="bpanel" id="bp-'+id+'" hidden></div>'+
@@ -937,6 +941,11 @@ input[type=range]{width:100%;accent-color:#9747FF}
       $('c2').setAttribute('aria-label','Plans for '+inds[i]+' brands, swipe or use arrows');
       if(focus){btns[i].focus();}
     }
+    var ap=$('bt-prev'),an=$('bt-next');
+    function arrows(){ap.disabled=box.scrollLeft<=2;an.disabled=box.scrollLeft+box.clientWidth>=box.scrollWidth-2;}
+    ap.addEventListener('click',function(){box.scrollBy({left:-Math.max(160,box.clientWidth*.7),behavior:'smooth'});});
+    an.addEventListener('click',function(){box.scrollBy({left:Math.max(160,box.clientWidth*.7),behavior:'smooth'});});
+    box.addEventListener('scroll',arrows);window.addEventListener('resize',arrows);setTimeout(arrows,0);
     box.addEventListener('wheel',function(e){if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){box.scrollLeft+=e.deltaY;e.preventDefault();}},{passive:false});
     var q=$('bt-q'),qx=$('bt-x'),emp=$('bt-empty');
     function setTabs(on){btns.forEach(function(b){b.setAttribute('aria-selected','false');b.tabIndex=on?0:-1;});}
