@@ -171,8 +171,10 @@ main{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
 .bmeta small{font:600 11px var(--font-display);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .bmeta b{font-size:15px;white-space:nowrap}
 .bnote{margin:-4px 2px 0;font-size:12px;color:var(--muted)}
-.bhead .blinks{margin-left:auto;align-self:flex-start}
-@media(max-width:420px){.bhead{flex-wrap:wrap}.bhead .blinks{margin-left:0;width:100%}}
+.bslide{container-type:inline-size}.bhead .blogo{width:48px;height:48px}.bhead{display:grid!important;grid-template-columns:auto minmax(0,1fr) auto;column-gap:12px;row-gap:10px;align-items:center}.bhead .blogo{grid-column:1;grid-row:1}.bhead .bt{display:contents}.bhead .bt h3{grid-column:2;grid-row:1;min-width:0}.bhead .tag{grid-column:1/3;grid-row:2;justify-self:start}.bhead .blinks{grid-column:3;grid-row:1/3}
+@container (max-width:285px){.bhead .blinks{grid-column:1/4;grid-row:3;flex-direction:row!important}.bhead .blinks a{flex:1}.bhead .bt h3{font-size:24px}}.bhead .bt h3{white-space:nowrap;font-size:clamp(18px,7cqw,30px);line-height:1.1;overflow:hidden;text-overflow:ellipsis}.bhead .tag{white-space:nowrap;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.bhead .blinks{margin-left:0;flex-direction:column;gap:7px;align-self:center}.bhead .blinks a{height:30px;min-width:92px;justify-content:center;padding:0 10px}
+
 .bsteps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .bstep{display:flex;gap:12px;align-items:center;text-align:left;padding:16px 14px;min-height:92px;border-radius:16px;border:.8px solid rgba(var(--c),.6);background:#fff;color:var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s}
 .bstep i{flex:none;width:34px;height:34px;border-radius:50%;background:rgb(var(--c));color:#fff;font:700 16px var(--font-display);font-style:normal;display:grid;place-items:center}
@@ -563,7 +565,7 @@ input[type=range]{width:100%;accent-color:#9747FF}
   <!-- Carousel 2: what I would do for brands -->
   <section class="wrap tint tone-blue brandwrap" id="brands" aria-labelledby="brands-h">
     <div class="sh">
-      <h2 id="brands-h">Brands I Would Love to Grow</h2>
+      <h2 id="brands-h">Brand Audit and My Strategy to Grow Them</h2>
       <div class="ctrl" data-for="c2" hidden style="display:none">
         <button type="button" data-dir="-1" aria-label="Previous brand"><svg class="ic"><use href="#i-left"/></svg></button>
         <span class="count" aria-live="polite">1 / 2</span>
@@ -864,8 +866,8 @@ input[type=range]{width:100%;accent-color:#9747FF}
     return '<article class="bslide tint2 tone-'+b.tone+'" data-b="'+id+'">'+
       '<header class="bhead"><span class="blogo" data-i="'+b.name.charAt(0)+'"><img src="https://www.google.com/s2/favicons?domain='+host+'&sz=64" alt="" width="32" height="32" loading="lazy" onerror="this.remove()"></span>'+
       '<div class="bt"><h3>'+b.name+'</h3><span class="tag">'+b.ind.replace('&','&amp;')+'</span></div>'+
-      '<div class="blinks"><a href="'+p.w+'" target="_blank" rel="noopener" aria-label="'+b.name+' website">Site ↗</a>'+
-      '<a href="'+p.l+'" target="_blank" rel="noopener" aria-label="'+b.name+' on LinkedIn">in</a></div></header>'+
+      '<div class="blinks"><a href="'+p.w+'" target="_blank" rel="noopener" aria-label="'+b.name+' website"><span>Website</span> ↗</a>'+
+      '<a href="'+p.l+'" target="_blank" rel="noopener" aria-label="'+b.name+' on LinkedIn"><span>LinkedIn</span> ↗</a></div></header>'+
       '<div class="bmeta"><span><small>Founded</small><b>'+p.f+'</b></span><span><small>Revenue</small><b>'+p.r+'</b></span>'+'</div>'+
       '<p class="bnote">'+p.rn+'</p>'+
       '<p class="bhint"><i></i>Tap a tile to explore</p><div class="bsteps">'+btns+'</div>'+
