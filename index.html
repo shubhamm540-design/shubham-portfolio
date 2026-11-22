@@ -148,10 +148,6 @@ main{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
 @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
 @media(prefers-reduced-motion:reduce){.side-arr.r:not(:disabled){animation:none}}
 @media(max-width:600px){.side-arr{width:38px;height:38px;margin-top:-19px;font-size:26px}.side-arr.l{left:-8px}.side-arr.r{right:-8px}}
-.bt-logos{display:flex;flex-wrap:wrap;gap:10px;margin:2px 0 18px}
-.bt-logos button{position:relative;width:46px;height:46px;border-radius:50%;border:2px solid #fff;background:linear-gradient(135deg,rgb(var(--c)),rgba(var(--c),.55));box-shadow:0 3px 10px rgba(0,0,0,.12);padding:0;cursor:pointer;display:grid;place-items:center;font:700 18px var(--font-display);color:#fff;transition:transform .15s,box-shadow .15s}
-.bt-logos button:hover,.bt-logos button:focus-visible{transform:translateY(-3px) scale(1.08);box-shadow:0 8px 18px rgba(0,0,0,.22)}
-.bt-logos button img{position:absolute;inset:0;margin:auto;width:28px;height:28px;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 0 0 9px #fff}
 .bt-nav{flex:1;min-width:0;display:flex;align-items:center;gap:6px}
 .bt-arr{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid rgb(var(--c));background:#fff;color:rgb(var(--c));font:700 22px/1 var(--font-display);cursor:pointer;display:grid;place-items:center;padding:0 0 3px;transition:transform .15s,background .15s,color .15s}
 .bt-arr:hover{background:rgb(var(--c));color:#fff;transform:scale(1.08)}
@@ -585,7 +581,6 @@ input[type=range]{width:100%;accent-color:#9747FF}
         <button type="button" data-dir="1" aria-label="Next brand"><svg class="ic"><use href="#i-right"/></svg></button>
       </div>
     </div>
-    <div class="bt-logos" id="bt-logos" aria-label="Brands covered. Tap a logo to open that brand"></div>
     <div class="bt-bar">
     <div class="bt-search"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><input id="bt-q" type="search" placeholder="Search brand, industry" aria-label="Search brands or industries" autocomplete="off"><button type="button" id="bt-x" aria-label="Clear search" hidden>×</button></div>
     <div class="bt-nav"><button type="button" class="bt-arr" id="bt-prev" aria-label="Scroll industries left">&#8249;</button><div class="bt-tabs" id="bt-tabs" role="tablist" aria-label="Industry"></div><button type="button" class="bt-arr" id="bt-next" aria-label="Scroll industries right">&#8250;</button></div>
@@ -858,9 +853,9 @@ input[type=range]{width:100%;accent-color:#9747FF}
     'upGrad':{f:'2015',r:'₹2,070 Cr',rn:'FY26 · gross revenue incl. taxes, company-reported',w:'https://www.upgrad.com',l:'https://www.linkedin.com/school/upgrad/',u:'',g:'',b:'',s:''},
     'Internshala':{f:'2010',r:'₹44.1 Cr',rn:'FY25 · RoC filing; upGrad owns a majority stake',w:'https://internshala.com',l:'https://www.linkedin.com/company/internshala/',u:'',g:'',b:'',s:''},
     'apna':{f:'2019',r:'₹144 Cr',rn:'FY25 · total revenue per Inc42',w:'https://apna.co',l:'https://www.linkedin.com/search/results/companies/?keywords=apna.co',u:'',g:'',b:'',s:''},
-    'Bla Bli Blu':{f:'2025',r:'₹250 Cr ARR',rn:'Oct 2026 · company claim, annualised run-rate',w:'https://blabliblu.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Bla%20Bli%20Blu',u:'',g:'',b:'',s:''},
+    'Bla Bli Blu':{f:'2025',r:'₹250 Cr ARR',rn:'Oct 2026 · company claim, annualised run-rate',w:'https://blabliblulife.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Bla%20Bli%20Blu',u:'',g:'',b:'',s:''},
     'Suroskie':{f:'2020',r:'Not disclosed',rn:'No public financials found',w:'https://suroskie.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Suroskie',u:'',g:'',b:'',s:''},
-    'BeCalm':{f:'Not found',r:'Not disclosed',rn:'No public financials found',w:'https://www.instagram.com/lets_becalm/',l:'https://www.linkedin.com/search/results/companies/?keywords=BeCalm%20skincare',u:'',g:'',b:'',s:''},
+    'BeCalm':{f:'Not found',r:'Not disclosed',rn:'No public financials found',w:'https://www.instagram.com/lets_becalm/',nologo:1,l:'https://www.linkedin.com/search/results/companies/?keywords=BeCalm%20skincare',u:'',g:'',b:'',s:''},
     'Scrubsy':{f:'2025',r:'Not disclosed',rn:'Raised ₹27 Cr in Aug 2026; no revenue reported',w:'https://scrubsy.co.in',l:'https://www.linkedin.com/search/results/companies/?keywords=Scrubsy',u:'',g:'',b:'',s:''},
     'Snitch':{f:'2019',r:'₹900 Cr',rn:'FY26 · founder-reported (unaudited)',w:'https://www.snitch.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Snitch',u:'',g:'',b:'',s:''},
     'Bewakoof':{f:'2012',r:'₹243 Cr',rn:'FY26 · per Inc42',w:'https://www.bewakoof.com',l:'https://www.linkedin.com/search/results/companies/?keywords=Bewakoof',u:'',g:'',b:'',s:''},
@@ -877,7 +872,7 @@ input[type=range]{width:100%;accent-color:#9747FF}
     var host=p.w.replace(/^https?:\/\/(www\.)?/,'').replace(/\/.*$/,'');
     var btns=steps.map(function(t){return '<button type="button" class="bstep" data-k="'+t[0]+'" aria-expanded="false" aria-controls="bp-'+id+'"><i>'+t[1]+'</i><span><b>'+t[2]+'</b><em>'+t[3]+'</em></span><u aria-hidden="true">+</u></button>';}).join('');
     return '<article class="bslide tint2 tone-'+b.tone+'" data-b="'+id+'">'+
-      '<header class="bhead"><span class="blogo" data-i="'+b.name.charAt(0)+'"><img src="https://www.google.com/s2/favicons?domain='+host+'&sz=64" alt="" width="32" height="32" loading="lazy" onerror="this.remove()"></span>'+
+      '<header class="bhead"><span class="blogo" data-i="'+b.name.charAt(0)+'">'+(p.nologo?'':'<img src="https://www.google.com/s2/favicons?domain='+host+'&sz=128" alt="" width="32" height="32" loading="lazy" onerror="this.remove()">')+'</span>'+
       '<div class="bt"><h3>'+b.name+'</h3><span class="tag">'+b.ind.replace('&','&amp;')+'</span></div>'+
       '<div class="blinks"><a href="'+p.w+'" target="_blank" rel="noopener" aria-label="'+b.name+' website"><span>Website</span> ↗</a>'+
       '<a href="'+p.l+'" target="_blank" rel="noopener" aria-label="'+b.name+' on LinkedIn"><span>LinkedIn</span> ↗</a></div></header>'+
@@ -976,13 +971,6 @@ input[type=range]{width:100%;accent-color:#9747FF}
     }
     q.addEventListener('input',search);
     qx.addEventListener('click',function(){q.value='';search();q.focus();});
-    (function(){
-      var lg=$('bt-logos');
-      lg.innerHTML=brands.map(function(b){var p=pub[b.name]||{},h=(p.w||'').replace(/^https?:\/\/(www\.)?/,'').replace(/\/.*$/,'');
-        return '<button type="button" class="tone-'+b.tone+'" data-n="'+b.name.replace(/"/g,'&quot;')+'" title="'+b.name+'" aria-label="Open '+b.name+'">'+b.name.charAt(0)+'<img src="https://www.google.com/s2/favicons?domain='+h+'&sz=64" alt="" loading="lazy" onerror="this.remove()"></button>';}).join('');
-      lg.addEventListener('click',function(e){var bt=e.target.closest('button');if(!bt){return;}
-        var n=bt.getAttribute('data-n');q.value=n;search();$('c2').scrollIntoView({block:'nearest',behavior:'smooth'});});
-    })();
     var sp=$('sa-prev'),sn=$('sa-next'),cp=document.querySelector('.ctrl[data-for="c2"] [data-dir="-1"]'),cn=document.querySelector('.ctrl[data-for="c2"] [data-dir="1"]');
     function sync(){sp.disabled=cp.disabled;sn.disabled=cn.disabled;}
     sp.addEventListener('click',function(){cp.click();});sn.addEventListener('click',function(){cn.click();});
