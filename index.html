@@ -153,22 +153,35 @@ main{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
 .bt-tab[aria-selected="true"] .n{background:rgba(255,255,255,.25)}
 .bt-tab:focus-visible{outline:3px solid #1D192B;outline-offset:2px}
 .bslide{position:relative}
-.pubd{align-items:start;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}
-.pubd>div{background:rgba(255,255,255,.7);border:.8px solid rgba(var(--c),.45);border-radius:12px;padding:9px 12px;min-width:0}
-.pubd dt{font:600 12px var(--font-display);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
-.pubd dd{margin:2px 0 0;font-weight:600;font-size:16px;overflow-wrap:anywhere}
-.pubd dd small{display:block;font-weight:500;font-size:12.5px;color:var(--muted);margin-top:2px}
-.pubd a{text-decoration:underline;text-underline-offset:3px}
-.bsteps{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.bstep{display:flex;gap:10px;align-items:center;text-align:left;padding:10px 12px;border-radius:12px;border:.8px solid rgba(var(--c),.6);background:#fff;font:600 11.5px/1.25 var(--font-display);text-transform:uppercase;letter-spacing:0;color:var(--ink);cursor:pointer}
-.bstep i{flex:none;width:24px;height:24px;border-radius:50%;background:rgb(var(--c));color:#fff;font-style:normal;display:grid;place-items:center;font-size:13px}
-.bstep:hover,.bstep[aria-expanded="true"]{background:rgb(var(--c));color:#fff}
+.bhead{display:flex;align-items:center;gap:12px}
+.bt{flex:1;min-width:0}
+.bt h3{font-size:26px;line-height:1.1;margin:0 0 4px}
+.blogo{flex:none;width:52px;height:52px;border-radius:14px;background:#fff;border:.8px solid rgba(var(--c),.5);display:grid;place-items:center;position:relative;font:700 22px var(--font-display);color:rgb(var(--c))}
+.blogo:before{content:attr(data-i);position:absolute}
+.blogo img{position:relative;border-radius:8px;background:#fff}
+.blinks{display:flex;gap:6px;flex:none}
+.blinks a{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 10px;border-radius:999px;background:rgba(255,255,255,.8);border:.8px solid rgba(var(--c),.5);font:600 12px var(--font-display);color:var(--ink);text-decoration:none}
+.blinks a:hover{background:rgb(var(--c));color:#fff}
+.bmeta{display:flex;gap:8px}
+.bmeta{align-items:stretch}.bmeta .blinks{align-items:center}.bmeta span{flex:1;flex-direction:column;align-items:flex-start!important;gap:0!important;background:rgba(255,255,255,.7);border-radius:10px;padding:6px 10px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.bmeta small{font:600 11px var(--font-display);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.bmeta b{font-size:15px;white-space:nowrap}
+.bnote{margin:-4px 2px 0;font-size:12px;color:var(--muted)}
+.bsteps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bstep{display:flex;gap:12px;align-items:center;text-align:left;padding:16px 14px;min-height:92px;border-radius:16px;border:.8px solid rgba(var(--c),.6);background:#fff;color:var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.bstep i{flex:none;width:34px;height:34px;border-radius:50%;background:rgb(var(--c));color:#fff;font:700 16px var(--font-display);font-style:normal;display:grid;place-items:center}
+.bstep b{display:block;font:600 16px/1.2 var(--font-display)}
+.bstep em{display:block;font-style:normal;font-size:12.5px;color:var(--muted);margin-top:3px}
+.bstep:hover,.bstep[aria-expanded="true"]{background:rgb(var(--c));color:#fff;transform:translateY(-2px);box-shadow:0 8px 18px rgba(var(--c),.35)}
+.bstep:hover em,.bstep[aria-expanded="true"] em{color:rgba(255,255,255,.85)}
 .bstep:hover i,.bstep[aria-expanded="true"] i{background:#fff;color:rgb(var(--c))}
 .bstep:focus-visible{outline:3px solid #1D192B;outline-offset:2px}
-.bpanel{background:rgba(255,255,255,.85);border:.8px dashed rgba(var(--c),.7);border-radius:14px;padding:14px 16px;font-size:15px}
-.bpanel h4{margin:0 0 6px;font-size:15px}
+.bpanel{background:rgba(255,255,255,.9);border:.8px dashed rgba(var(--c),.7);border-radius:14px;padding:14px 16px;font-size:15px}
+.bpanel h4{margin:0 0 6px;font-size:16px}
 .bpanel .soon{margin:0;color:var(--muted)}
-@media(max-width:560px){.pubd,.bsteps{grid-template-columns:1fr}}
+.bfull{align-self:stretch;text-align:center;padding:12px 18px;border-radius:999px;background:var(--ink);color:#fff;font:600 15px var(--font-display);text-decoration:none}
+.bfull:hover{background:rgb(var(--c))}
+@media(max-width:560px){.bsteps{grid-template-columns:1fr}.bstep{min-height:0}}
 .bslide .open{align-self:flex-start;display:inline-flex;gap:6px;align-items:center;padding:9px 18px;border-radius:999px;background:#fff;border:.8px solid rgba(var(--c),.6);font-size:15px;font-weight:600;text-decoration:none;color:var(--ink)}
 .bslide .open:after{content:"";position:absolute;inset:0;border-radius:16px}
 .bslide .open:focus-visible{outline:none}
@@ -810,21 +823,20 @@ input[type=range]{width:100%;accent-color:#9747FF}
     'HealthKart':{f:'2011',r:'₹1,313 Cr',rn:'FY25 · RoC filing',w:'https://www.healthkart.com',l:'https://www.linkedin.com/search/results/companies/?keywords=HealthKart',u:'',g:'',b:'',s:''},
     'cult.fit':{f:'2016',r:'₹1,721 Cr',rn:'FY26 · IPO filing (DRHP)',w:'https://www.cult.fit',l:'https://www.linkedin.com/search/results/companies/?keywords=cult.fit',u:'',g:'',b:'',s:''}
   };
-  var steps=[['u','1','Understand the brand'],['g','2','Decode the GTM'],['b','3','Benchmark & identifying gaps'],['s','4','Building the growth strategy with Shubham']];
+  var steps=[['u','1','Brand X-Ray','Who they are, who they win'],['g','2','GTM Teardown','How they go to market'],['b','3','Gap Finder','Where they trail the best'],['s','4','My Growth Playbook','What I would do first']];
   function brandSlide(b){
     var p=pub[b.name]||{},id=b.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
-    var btns=steps.map(function(t){return '<button type="button" class="bstep" data-k="'+t[0]+'" aria-expanded="false" aria-controls="bp-'+id+'"><i>'+t[1]+'</i><span>'+t[2]+'</span></button>';}).join('');
+    var host=p.w.replace(/^https?:\/\/(www\.)?/,'').replace(/\/.*$/,'');
+    var btns=steps.map(function(t){return '<button type="button" class="bstep" data-k="'+t[0]+'" aria-expanded="false" aria-controls="bp-'+id+'"><i>'+t[1]+'</i><span><b>'+t[2]+'</b><em>'+t[3]+'</em></span></button>';}).join('');
     return '<article class="bslide tint2 tone-'+b.tone+'" data-b="'+id+'">'+
-      '<span class="tag">'+b.ind.replace('&','&amp;')+'</span>'+
-      '<h3>'+b.name+'</h3>'+
-      '<dl class="pubd">'+
-        '<div><dt>Founded</dt><dd>'+p.f+'</dd></div>'+
-        '<div><dt>Current revenue</dt><dd>'+p.r+'<small>'+p.rn+'</small></dd></div>'+
-        '<div><dt>Website</dt><dd><a href="'+p.w+'" target="_blank" rel="noopener">'+p.w.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'')+' ↗</a></dd></div>'+
-        '<div><dt>LinkedIn</dt><dd><a href="'+p.l+'" target="_blank" rel="noopener">'+(p.l.indexOf('/search/')>-1?'Find on LinkedIn':'Company page')+' ↗</a></dd></div>'+
-      '</dl>'+
+      '<header class="bhead"><span class="blogo" data-i="'+b.name.charAt(0)+'"><img src="https://www.google.com/s2/favicons?domain='+host+'&sz=128" alt="" width="40" height="40" loading="lazy" onerror="this.remove()"></span>'+
+      '<div class="bt"><h3>'+b.name+'</h3><span class="tag">'+b.ind.replace('&','&amp;')+'</span></div></header>'+
+      '<div class="bmeta"><span><small>Founded</small><b>'+p.f+'</b></span><span><small>Revenue</small><b>'+p.r+'</b></span>'+'<div class="blinks"><a href="'+p.w+'" target="_blank" rel="noopener" aria-label="'+b.name+' website">Site ↗</a>'+
+      '<a href="'+p.l+'" target="_blank" rel="noopener" aria-label="'+b.name+' on LinkedIn">in</a></div></div>'+
+      '<p class="bnote">'+p.rn+'</p>'+
       '<div class="bsteps">'+btns+'</div>'+
-      '<div class="bpanel" id="bp-'+id+'" hidden></div></article>';
+      '<div class="bpanel" id="bp-'+id+'" hidden></div>'+
+      '<a class="bfull" href="'+id+'/">Click here to read the full strategy <span aria-hidden="true">→</span></a></article>';
   }
 
   /* ---------- carousel ---------- */
@@ -880,7 +892,7 @@ input[type=range]{width:100%;accent-color:#9747FF}
     if(was){panel.hidden=true;return;}
     var name=card.querySelector('h3').textContent,p=pub[name]||{},st=steps.filter(function(t){return t[0]===k;})[0];
     bt.setAttribute('aria-expanded','true');
-    panel.innerHTML='<h4>'+st[1]+'. '+st[2]+'</h4>'+(p[k]?'<div>'+p[k]+'</div>':'<p class="soon">Coming soon. This part of the analysis is being written.</p>');
+    panel.innerHTML='<h4>'+st[2]+'</h4>'+(p[k]?'<div>'+p[k]+'</div>':'<p class="soon">Coming soon. This part of the analysis is being written.</p>');
     panel.hidden=false;
   });
   (function(){
