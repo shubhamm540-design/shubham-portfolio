@@ -63,7 +63,7 @@ body{padding-bottom:8px}
 .stat b{font-family:var(--font-display);font-size:34px;line-height:1.05;font-weight:600;letter-spacing:-.02em}
 .stat span{font-size:14px;color:var(--muted);line-height:1.35}
 .stat a{margin-top:auto;font-size:12.5px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
-.note{font-size:13.5px;color:var(--muted);margin-top:10px;max-width:80ch}
+.note{font-size:13.5px;color:var(--muted);margin-top:10px;max-width:none}
 .read{display:grid;gap:10px}
 .read li{background:rgba(255,255,255,.78);border:.8px dashed rgba(var(--c),.6);border-radius:14px;padding:12px 16px;font-size:16px}
 .read li b{font-weight:600}
