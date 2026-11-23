@@ -43,7 +43,7 @@ svg.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;str
 /* header */
 .hdr{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:30;width:min(1312px,calc(100% - 32px));background:var(--navpink);border-radius:20px;padding:8px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{display:flex;align-items:center;gap:10px;padding:0 14px;font-family:var(--font-display);font-weight:600;font-size:26px;letter-spacing:-.03em;text-decoration:none;white-space:nowrap}
-.logo svg{width:34px;height:34px;flex:none}
+.logo img{width:38px;height:38px;flex:none;border-radius:50%;object-fit:cover;object-position:50% 20%;border:2px solid #fff;box-shadow:0 0 0 1.5px #9747FF}
 .hdr nav{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
 .hdr nav::-webkit-scrollbar{display:none}
 .nl{display:flex;align-items:center;gap:10px;padding:8px 22px 8px 10px;border-radius:16px;border:1.6px solid rgba(255,36,189,.14);text-decoration:none;font-size:15px;white-space:nowrap;background:rgba(255,255,255,.35)}
@@ -443,7 +443,7 @@ input[type=range]{width:100%;accent-color:#9747FF}
   .about-box{position:static}
   .hdr{top:10px;padding:6px}
   .logo{font-size:0;gap:0;padding:0 6px}
-  .logo svg{width:34px;height:34px}
+  .logo img{width:36px;height:36px}
   .wslide{grid-template-columns:1fr}
   .visual{min-height:0}
   .foot3{grid-template-columns:1fr}
@@ -510,8 +510,8 @@ input[type=range]{width:100%;accent-color:#9747FF}
 
 <header class="hdr">
   <a class="logo" href="#home" aria-label="Shubham Mishra, home">
-    <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#9747FF"/><circle cx="17" cy="9.5" r="3.4" fill="#fff"/><circle cx="17" cy="24.5" r="3.4" fill="#fff"/><circle cx="9.5" cy="17" r="3.4" fill="#fff"/><circle cx="24.5" cy="17" r="3.4" fill="#fff"/></svg>
-    Shubham
+    <img src="photo.jpg" alt="Shubham Mishra" width="38" height="38">
+    Shubham Mishra
   </a>
   <nav aria-label="Sections">
     <a class="nl" href="#home"><span class="ni"><svg class="ic"><use href="#i-home"/></svg></span>Home</a>
